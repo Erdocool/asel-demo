@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>İletişim | Asel Havalı El Aletleri</title>
+<meta name="description" content="ASEL ile iletişime geçin — İvedik OSB, Yenimahalle / Ankara.">
+<meta name="theme-color" content="#fbfbfd">
+<link rel="canonical" href="https://aselelaletleri.com/iletisim.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="Asel Havalı El Aletleri">
+<meta property="og:title" content="İletişim | Asel Havalı El Aletleri">
+<meta property="og:description" content="ASEL ile iletişime geçin — İvedik OSB, Yenimahalle / Ankara.">
+<meta property="og:image" content="assets/poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="İletişim | Asel Havalı El Aletleri">
+<meta name="twitter:description" content="ASEL ile iletişime geçin — İvedik OSB, Yenimahalle / Ankara.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<a class="skip" href="#icerik">İçeriğe geç</a>
+<nav class="nav" aria-label="Ana menü"><div class="in">
+<a class="logo" href="index.html" aria-label="Asel ana sayfa">AS<span>E</span>L</a>
+<button class="burger" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="navlinks">☰</button>
+<div class="links" id="navlinks"><a href="index.html" class="">Ana Sayfa</a><a href="kategoriler.html" class="">Ürünler</a><a href="urun-asht-4050012.html" class="">ASHT‑4050012</a><a href="inceleme.html" class="">İnceleme</a><a href="karsilastir.html" class="">Karşılaştır</a><a href="hakkimizda.html" class="">Hakkımızda</a><a href="iletisim.html" class="active" aria-current="page">İletişim</a></div>
+</div></nav>
+<main id="icerik">
+
+<header class="hero wrap">
+  <div style="text-align:left;max-width:980px;margin:0 auto">
+    <p class="eyebrow reveal">İletişim</p>
+    <h1 class="reveal" style="text-align:left">Konuşalım.</h1>
+  </div>
+</header>
+<section class="wrap" style="padding-top:0">
+  <div class="split">
+    <div class="reveal">
+      <p class="lead" style="margin-left:0;margin-top:0">İvedik OSB Mahallesi 1419. Cad. No:76<br>Yenimahalle / Ankara</p>
+      <p style="margin-top:14px;font-size:15px"><a href="mailto:info@aselelaletleri.com">info@aselelaletleri.com</a><br>
+      <a href="mailto:asel@aselelaletleri.com">asel@aselelaletleri.com</a></p>
+      <p style="font-size:15px;margin-top:8px"><a href="tel:+903123122735">0 (312) 312 27 35</a></p>
+      <p class="hint" style="margin-top:20px;font-size:12px;color:var(--mute)">Bu form prototiptir; mesaj sunucuya gönderilmez.</p>
+    </div>
+    <form class="form card reveal" id="contactForm" novalidate>
+      <h2 style="font-size:20px;font-weight:500;margin-bottom:4px">Teklif / bilgi</h2>
+      <label>Ad Soyad<input name="name" autocomplete="name" required placeholder="Adınız"></label>
+      <label>E‑posta<input type="email" name="email" autocomplete="email" required placeholder="ornek@firma.com"></label>
+      <label>Ürün<input name="product" placeholder="örn. ASHT‑4050012"></label>
+      <label>Mesaj<textarea name="message" rows="4" required placeholder="Mesajınız"></textarea></label>
+      <button class="btn" type="submit">Gönder</button>
+      <p class="hint" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+<script>
+document.getElementById('contactForm')?.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const f = e.target;
+  if (!f.checkValidity()) { f.reportValidity(); return; }
+  f.querySelectorAll('input,textarea,button').forEach(el => el.disabled = true);
+  document.getElementById('formStatus').textContent = 'Teşekkürler — prototip olduğu için gönderilmedi.';
+});
+</script>
+
+</main>
+<footer>
+<div class="wrap">
+  <div>
+    <div>© 2026 Asel Havalı El Aletleri — Prototip</div>
+    <div style="margin-top:6px">İvedik OSB Mah. 1419. Cad. No:76 Yenimahalle / Ankara</div>
+    <div style="margin-top:4px"><a href="mailto:info@aselelaletleri.com">info@aselelaletleri.com</a> · <a href="tel:+903123122735">0 (312) 312 27 35</a></div>
+  </div>
+  <nav aria-label="Alt menü">
+    <a href="kategoriler.html">Ürünler</a>
+    <a href="kategoriler.html#niapro">NIAPRO</a>
+    <a href="karsilastir.html">Karşılaştır</a>
+    <a href="iletisim.html">İletişim</a>
+  </nav>
+</div>
+</footer>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+<script src="main.js"></script>
+</body></html>

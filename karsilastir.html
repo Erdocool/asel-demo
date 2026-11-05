@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Karşılaştır | Asel Havalı El Aletleri</title>
+<meta name="description" content="ASHT modellerini yan yana karşılaştırın — senkron 3D görünüm ve teknik tablo.">
+<meta name="theme-color" content="#fbfbfd">
+<link rel="canonical" href="https://aselelaletleri.com/karsilastir.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="Asel Havalı El Aletleri">
+<meta property="og:title" content="Karşılaştır | Asel Havalı El Aletleri">
+<meta property="og:description" content="ASHT modellerini yan yana karşılaştırın — senkron 3D görünüm ve teknik tablo.">
+<meta property="og:image" content="assets/poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Karşılaştır | Asel Havalı El Aletleri">
+<meta name="twitter:description" content="ASHT modellerini yan yana karşılaştırın — senkron 3D görünüm ve teknik tablo.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<a class="skip" href="#icerik">İçeriğe geç</a>
+<nav class="nav" aria-label="Ana menü"><div class="in">
+<a class="logo" href="index.html" aria-label="Asel ana sayfa">AS<span>E</span>L</a>
+<button class="burger" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="navlinks">☰</button>
+<div class="links" id="navlinks"><a href="index.html" class="">Ana Sayfa</a><a href="kategoriler.html" class="">Ürünler</a><a href="urun-asht-4050012.html" class="">ASHT‑4050012</a><a href="inceleme.html" class="">İnceleme</a><a href="karsilastir.html" class="active" aria-current="page">Karşılaştır</a><a href="hakkimizda.html" class="">Hakkımızda</a><a href="iletisim.html" class="">İletişim</a></div>
+</div></nav>
+<main id="icerik">
+
+<header class="hero wrap">
+  <p class="eyebrow reveal">Karşılaştırma</p>
+  <h1 class="reveal">Yan yana bakın</h1>
+  <p class="lead reveal">İki modeli seçin. 3D görünümler senkron döner.</p>
+</header>
+
+<section class="wrap-wide" style="padding-top:4px">
+  <div class="compare-bar reveal">
+    <label>Sol ürün
+      <select id="selA" aria-label="Sol ürün seçimi">
+        <option value="4050012" selected>ASHT‑4050012</option>
+        <option value="40512">ASHT‑40512</option>
+        <option value="40412">ASHT‑40412</option>
+        <option value="40634">ASHT‑40634</option>
+      </select>
+    </label>
+    <label>Sağ ürün
+      <select id="selB" aria-label="Sağ ürün seçimi">
+        <option value="4050012">ASHT‑4050012</option>
+        <option value="40512">ASHT‑40512</option>
+        <option value="40412">ASHT‑40412</option>
+        <option value="40634" selected>ASHT‑40634</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="compare-grid reveal">
+    <div>
+      <p class="center" style="font-size:14px;margin-bottom:10px;font-weight:500" id="nameA">ASHT‑4050012</p>
+      <div class="viewer-shell">
+  <model-viewer id="mvA" src="assets/asht4050012.glb" poster="assets/poster.jpg"
+    alt="Sol ürün 3D modeli" camera-controls touch-action="none" shadow-intensity="0.55"
+    exposure="1.05" environment-image="neutral" interaction-prompt="auto"
+    camera-orbit="35deg 70deg 105%" field-of-view="28deg" min-field-of-view="18deg" max-field-of-view="40deg"
+    style="width:100%;height:100%;background:transparent"></model-viewer>
+  <p class="viewer-hint">Sürükleyerek döndürün</p>
+</div>
+    </div>
+    <div>
+      <p class="center" style="font-size:14px;margin-bottom:10px;font-weight:500" id="nameB">ASHT‑40634</p>
+      <div class="viewer-shell">
+  <model-viewer id="mvB" src="assets/asht40634.glb" poster="assets/asht-40634.webp"
+    alt="Sağ ürün 3D modeli" camera-controls touch-action="none" shadow-intensity="0.55"
+    exposure="1.05" environment-image="neutral" interaction-prompt="auto"
+    camera-orbit="35deg 70deg 105%" field-of-view="28deg" min-field-of-view="18deg" max-field-of-view="40deg"
+    style="width:100%;height:100%;background:transparent"></model-viewer>
+  <p class="viewer-hint">Sürükleyerek döndürün</p>
+</div>
+    </div>
+  </div>
+  <p class="note reveal">ASHT‑4050012 / 40512 ve ASHT‑40634 için GLB yüklü. ASHT‑40412’de 3D yok — poster gösterilir. Kamera senkron. Ürün sayfalarına seçiciden gidebilirsiniz.</p>
+
+  <div class="reveal" style="overflow-x:auto">
+  <table class="compare-table" id="cmpTable">
+    <thead><tr><th scope="col">Özellik</th><th scope="col" id="thA">ASHT‑4050012</th><th scope="col" id="thB">ASHT‑40634</th></tr></thead>
+    <tbody id="cmpBody"></tbody>
+  </table>
+  </div>
+</section>
+
+<script>
+const PRODUCTS = {
+  "4050012": {
+    name: "ASHT‑4050012",
+    glb: "assets/asht4050012.glb",
+    poster: "assets/poster.jpg",
+    href: "urun-asht-4050012.html",
+    specs: {"Çekiç":"Çift Çekiç","Uzunluk":"167 mm","Cıvata Çapı":"19 mm","Soket Karesi":"1/2 inç","Maksimum Tork":"1750 Nm","Boşta Devir":"7250 r.p.m","Hortum Çapı":"10 mm","Hava Giriş Nipeli":"1/4 inç","Hava Tüketimi":"180 lt/dk","Çalışma Basıncı":"90–115 psi (6,5–8 bar)","Ağırlık":"2,07 kg","Ses Basınç Seviyesi LpA":"87 dB(A)","Ses Güç Seviyesi LwA":"102 dB(A)","Titreşim":"2,67 m/sn²"}
+  },
+  "40512": {
+    name: "ASHT‑40512",
+    glb: "assets/asht4050012.glb",
+    poster: "assets/asht-40512.webp",
+    href: "urun-asht-40512.html",
+    specs: {"Çekiç":"Çift Çekiç","Uzunluk":"167 mm","Cıvata Çapı":"19 mm","Soket Karesi":"1/2 inç","Maksimum Tork":"1750 Nm","Boşta Devir":"7250 r.p.m","Hortum Çapı":"10 mm","Hava Giriş Nipeli":"1/4 inç","Hava Tüketimi":"180 lt/dk","Çalışma Basıncı":"90–115 psi (6,5–8 bar)","Ağırlık":"2,07 kg","Ses Basınç Seviyesi LpA":"87 dB(A)","Ses Güç Seviyesi LwA":"102 dB(A)","Titreşim":"2,67 m/sn²"}
+  },
+  "40412": {
+    name: "ASHT‑40412",
+    glb: "",
+    poster: "assets/asht-40412-photo.webp",
+    href: "urun-asht-40412.html",
+    specs: {"Çekiç":"Çift Çekiç","Uzunluk":"146 mm","Cıvata Çapı":"17 mm","Soket Karesi":"1/2 inç","Maksimum Tork":"1250 Nm","Boşta Devir":"5500 r.p.m","Hortum Çapı":"10 mm","Hava Giriş Nipeli":"1/4 inç","Hava Tüketimi":"160 lt/dk","Çalışma Basıncı":"90–115 psi (6,5–8 bar)","Ağırlık":"1,78 kg","Ses Basınç Seviyesi LpA":"≈72,7 dB(A)","Ses Güç Seviyesi LwA":"—","Titreşim":"2,49 m/sn²"}
+  },
+  "40634": {
+    name: "ASHT‑40634",
+    glb: "assets/asht40634.glb",
+    poster: "assets/asht-40634.webp",
+    href: "urun-asht-40634.html",
+    specs: {"Çekiç":"Çift Çekiç","Uzunluk":"200 mm","Cıvata Çapı":"36 mm","Soket Karesi":"3/4 inç","Maksimum Tork":"2500 Nm","Boşta Devir":"5250 r.p.m","Hortum Çapı":"13 mm","Hava Giriş Nipeli":"1/4 inç","Hava Tüketimi":"240 lt/dk","Çalışma Basıncı":"90–115 psi (6,5–8 bar)","Ağırlık":"3,68 kg","Ses Basınç Seviyesi LpA":"≈94,86 dB(A)","Ses Güç Seviyesi LwA":"≈104,86 dB(A)","Titreşim":"4,74 m/sn²"}
+  }
+};
+const KEYS = ["Çekiç","Soket Karesi","Maksimum Tork","Boşta Devir","Cıvata Çapı","Uzunluk","Hortum Çapı","Hava Tüketimi","Çalışma Basıncı","Ağırlık","Ses Basınç Seviyesi LpA","Titreşim"];
+function applyModel(mv, key) {
+  const p = PRODUCTS[key];
+  if (!mv || !p) return;
+  mv.setAttribute('poster', p.poster);
+  if (p.glb) {
+    mv.setAttribute('src', p.glb);
+    mv.style.opacity = '1';
+  } else {
+    mv.removeAttribute('src');
+    mv.style.opacity = '1';
+  }
+}
+function fill() {
+  const a = selA.value, b = selB.value;
+  nameA.textContent = PRODUCTS[a].name;
+  nameB.textContent = PRODUCTS[b].name;
+  thA.textContent = PRODUCTS[a].name;
+  thB.textContent = PRODUCTS[b].name;
+  applyModel(document.getElementById('mvA'), a);
+  applyModel(document.getElementById('mvB'), b);
+  const body = document.getElementById('cmpBody');
+  body.innerHTML = '';
+  KEYS.forEach(k => {
+    const va = PRODUCTS[a].specs[k] || '—';
+    const vb = PRODUCTS[b].specs[k] || '—';
+    const tr = document.createElement('tr');
+    if (va !== vb) tr.className = 'diff';
+    tr.innerHTML = '<td>'+k+'</td><td>'+va+'</td><td>'+vb+'</td>';
+    body.appendChild(tr);
+  });
+}
+selA.addEventListener('change', fill);
+selB.addEventListener('change', fill);
+fill();
+customElements.whenDefined('model-viewer').then(() => {
+  if (window.initCompareSync) initCompareSync('#mvA','#mvB');
+});
+</script>
+
+</main>
+<footer>
+<div class="wrap">
+  <div>
+    <div>© 2026 Asel Havalı El Aletleri — Prototip</div>
+    <div style="margin-top:6px">İvedik OSB Mah. 1419. Cad. No:76 Yenimahalle / Ankara</div>
+    <div style="margin-top:4px"><a href="mailto:info@aselelaletleri.com">info@aselelaletleri.com</a> · <a href="tel:+903123122735">0 (312) 312 27 35</a></div>
+  </div>
+  <nav aria-label="Alt menü">
+    <a href="kategoriler.html">Ürünler</a>
+    <a href="kategoriler.html#niapro">NIAPRO</a>
+    <a href="karsilastir.html">Karşılaştır</a>
+    <a href="iletisim.html">İletişim</a>
+  </nav>
+</div>
+</footer>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+<script src="main.js"></script>
+</body></html>
