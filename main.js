@@ -49,6 +49,25 @@
     });
   }
 
+  // Prevent carousel card link activation on model-viewer interaction
+  document.querySelectorAll('.slide model-viewer').forEach((mv) => {
+    const link = mv.closest('a');
+    if (!link) return;
+    let interacting = false, moved = false;
+    let startX = 0, startY = 0;
+    mv.addEventListener('pointerdown', (e) => { 
+      interacting = true; moved = false;
+      startX = e.clientX; startY = e.clientY;
+    });
+    mv.addEventListener('pointermove', (e) => {
+      if (interacting && (Math.abs(e.clientX - startX) > 2 || Math.abs(e.clientY - startY) > 2)) moved = true;
+    });
+    mv.addEventListener('pointerup', () => { 
+      setTimeout(() => { interacting = false; }, moved ? 100 : 0);
+    });
+    link.addEventListener('click', (e) => { if (interacting) { e.preventDefault(); } });
+  });
+
   // Carousel (scroll-snap + touch)
   document.querySelectorAll('[data-carousel]').forEach((root) => {
     const track = root.querySelector('.carousel');
