@@ -240,3 +240,20 @@ footer a:hover{color:var(--acc)}
 @media(max-width:768px){
 .whatsapp-float{bottom:16px;right:16px;width:48px;height:48px}
 }
+
+/* Cookie consent banner */
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;background:rgba(29,29,31,.98);backdrop-filter:blur(10px);color:#fff;padding:20px 24px;display:none;z-index:9999;box-shadow:0 -4px 20px rgba(0,0,0,.15)}
+.cookie-banner.show{display:block}
+.cookie-banner .cookie-content{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.cookie-banner p{margin:0;flex:1;min-width:280px;font-size:14px;line-height:1.6}
+.cookie-banner .cookie-buttons{display:flex;gap:12px}
+.cookie-banner button{padding:10px 24px;border-radius:8px;font-weight:500;cursor:pointer;font-size:14px;border:none}
+.cookie-banner .accept{background:#0071e3;color:#fff}
+.cookie-banner .accept:hover{background:#0077ed}
+.cookie-banner .decline{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.3)}
+.cookie-banner .decline:hover{background:rgba(255,255,255,.1)}
+@media(max-width:768px){
+.cookie-banner .cookie-content{flex-direction:column;align-items:stretch}
+.cookie-banner .cookie-buttons{justify-content:stretch;flex-direction:column}
+.cookie-banner button{width:100%}
+}

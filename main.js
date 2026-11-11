@@ -143,3 +143,32 @@ document.body.appendChild(whatsappBtn);
     b.addEventListener('camera-change', () => mirror(b, a));
   };
 })();
+
+// Cookie consent banner
+(function() {
+  if (localStorage.getItem('cookieConsent')) return;
+  
+  const banner = document.createElement('div');
+  banner.className = 'cookie-banner';
+  banner.innerHTML = `
+    <div class="cookie-content">
+      <p>Bu web sitesi, deneyiminizi iyileştirmek için çerezler kullanmaktadır. Siteyi kullanmaya devam ederek çerez kullanımını kabul etmiş olursunuz. <a href="cerez-politikasi.html" style="color:#0071e3;text-decoration:underline">Daha fazla bilgi</a></p>
+      <div class="cookie-buttons">
+        <button class="accept" onclick="acceptCookies()">Kabul Et</button>
+        <button class="decline" onclick="declineCookies()">Reddet</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(banner);
+  setTimeout(() => banner.classList.add('show'), 500);
+  
+  window.acceptCookies = function() {
+    localStorage.setItem('cookieConsent', 'true');
+    banner.remove();
+  };
+  
+  window.declineCookies = function() {
+    localStorage.setItem('cookieConsent', 'false');
+    banner.remove();
+  };
+})();
