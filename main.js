@@ -172,3 +172,138 @@ document.body.appendChild(whatsappBtn);
     banner.remove();
   };
 })();
+
+// Site Search Implementation
+(function() {
+  const searchData = {
+    products: [],
+    pages: [],
+    dealers: [],
+    faqs: []
+  };
+  
+  // Build search index
+  function buildSearchIndex() {
+    // Products
+    const productPages = [
+      {title: 'ASHT-4050012', url: 'urun-asht-4050012.html', desc: '1750 Nm çift çekiç somun sökme'},
+      {title: 'ASHT-40412', url: 'urun-asht-40412.html', desc: '1250 Nm kompakt sessiz'},
+      {title: 'ASHT-40512', url: 'urun-asht-40512.html', desc: '1750 Nm profesyonel'},
+      {title: 'ASHT-40634', url: 'urun-asht-40634.html', desc: '2500 Nm ağır hizmet'},
+      {title: 'NIAPRO NA123', url: 'urun-niapro-na123.html', desc: 'Havalı çekiç'},
+      {title: 'NIAPRO NA212', url: 'urun-niapro-na212.html', desc: 'Havalı çekiç'},
+      {title: 'NIAPRO NA260', url: 'urun-niapro-na260.html', desc: 'Havalı çekiç'},
+      {title: 'NIAPRO NA320', url: 'urun-niapro-na320.html', desc: 'Havalı çekiç'},
+      {title: 'NIAPRO NC268', url: 'urun-niapro-nc268.html', desc: 'Kesme aleti'},
+      {title: 'NIAPRO NH138', url: 'urun-niapro-nh138.html', desc: 'Havalı çekiç'},
+      {title: 'NIAPRO NH148', url: 'urun-niapro-nh148.html', desc: 'Havalı çekiç'},
+      {title: 'NIAPRO NH214', url: 'urun-niapro-nh214.html', desc: 'Havalı çekiç'}
+    ];
+    searchData.products = productPages;
+    
+    // Pages
+    searchData.pages = [
+      {title: 'Ana Sayfa', url: 'index.html', desc: 'ASEL havalı el aletleri'},
+      {title: 'Ürünler', url: 'kategoriler.html', desc: 'Tüm ürünlerimiz'},
+      {title: 'Hakkımızda', url: 'hakkimizda.html', desc: 'Şirket bilgileri'},
+      {title: 'İletişim', url: 'iletisim.html', desc: 'Bizimle iletişime geçin'},
+      {title: 'Satış Noktaları', url: 'satis-noktalari.html', desc: 'Bayilerimiz'},
+      {title: 'Sertifikalar', url: 'sertifikalar.html', desc: 'ISO belgelerimiz'},
+      {title: 'S.S.S', url: 'sss.html', desc: 'Sıkça sorulan sorular'},
+      {title: 'Haberler', url: 'haberler.html', desc: 'Duyurular ve haberler'}
+    ];
+  }
+  
+  buildSearchIndex();
+  
+  // Create search UI
+  const searchBtn = document.createElement('button');
+  searchBtn.className = 'search-btn';
+  searchBtn.innerHTML = '🔍';
+  searchBtn.setAttribute('aria-label', 'Ara');
+  
+  const searchOverlay = document.createElement('div');
+  searchOverlay.className = 'search-overlay';
+  searchOverlay.innerHTML = `
+    <div class="search-modal">
+      <div class="search-header">
+        <input type="text" class="search-input" placeholder="Ürün, sayfa veya bayi ara..." autofocus>
+        <button class="search-close">&times;</button>
+      </div>
+      <div class="search-results"></div>
+    </div>
+  `;
+  
+  document.body.appendChild(searchBtn);
+  document.body.appendChild(searchOverlay);
+  
+  // Search functionality
+  const searchInput = searchOverlay.querySelector('.search-input');
+  const searchResults = searchOverlay.querySelector('.search-results');
+  const searchClose = searchOverlay.querySelector('.search-close');
+  
+  searchBtn.addEventListener('click', () => {
+    searchOverlay.classList.add('active');
+    searchInput.focus();
+  });
+  
+  searchClose.addEventListener('click', () => {
+    searchOverlay.classList.remove('active');
+    searchInput.value = '';
+    searchResults.innerHTML = '';
+  });
+  
+  searchOverlay.addEventListener('click', (e) => {
+    if (e.target === searchOverlay) {
+      searchClose.click();
+    }
+  });
+  
+  searchInput.addEventListener('input', (e) => {
+    const query = e.target.value.toLowerCase().trim();
+    if (query.length < 2) {
+      searchResults.innerHTML = '';
+      return;
+    }
+    
+    const results = [];
+    
+    // Search products
+    searchData.products.forEach(item => {
+      if (item.title.toLowerCase().includes(query) || item.desc.toLowerCase().includes(query)) {
+        results.push({...item, type: 'Ürün'});
+      }
+    });
+    
+    // Search pages
+    searchData.pages.forEach(item => {
+      if (item.title.toLowerCase().includes(query) || item.desc.toLowerCase().includes(query)) {
+        results.push({...item, type: 'Sayfa'});
+      }
+    });
+    
+    // Display results
+    if (results.length === 0) {
+      searchResults.innerHTML = '<div class="search-no-results">Sonuç bulunamadı</div>';
+    } else {
+      searchResults.innerHTML = results.map(r => `
+        <a href="${r.url}" class="search-result">
+          <div class="search-result-type">${r.type}</div>
+          <div class="search-result-title">${r.title}</div>
+          <div class="search-result-desc">${r.desc}</div>
+        </a>
+      `).join('');
+    }
+  });
+  
+  // Keyboard shortcut (Ctrl+K or Cmd+K)
+  document.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+      e.preventDefault();
+      searchBtn.click();
+    }
+    if (e.key === 'Escape' && searchOverlay.classList.contains('active')) {
+      searchClose.click();
+    }
+  });
+})();
