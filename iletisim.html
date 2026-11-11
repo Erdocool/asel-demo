@@ -44,34 +44,28 @@
       <p style="margin-top:14px;font-size:15px"><a href="mailto:info@aselelaletleri.com">info@aselelaletleri.com</a><br>
       <a href="mailto:asel@aselelaletleri.com">asel@aselelaletleri.com</a></p>
       <p style="font-size:15px;margin-top:8px"><a href="tel:+903123122735">0 (312) 312 27 35</a></p>
-      <p class="hint" style="margin-top:20px;font-size:12px;color:var(--mute)">Bu form prototiptir; mesaj sunucuya gönderilmez.</p>
     </div>
-    <form class="form card reveal" id="contactForm" novalidate>
+    <form class="form card reveal" method="post" action="mailto:info@aselelaletleri.com" enctype="text/plain">
       <h2 style="font-size:20px;font-weight:500;margin-bottom:4px">Teklif / bilgi</h2>
       <label>Ad Soyad<input name="name" autocomplete="name" required placeholder="Adınız"></label>
       <label>E‑posta<input type="email" name="email" autocomplete="email" required placeholder="ornek@firma.com"></label>
-      <label>Ürün<input name="product" placeholder="örn. ASHT‑4050012"></label>
+      <label>Telefon<input type="tel" name="telefon" autocomplete="tel" placeholder="+90"></label>
+      <label>Konu<input name="konu" placeholder="Konu"></label>
       <label>Mesaj<textarea name="message" rows="4" required placeholder="Mesajınız"></textarea></label>
+      <label style="display:flex;align-items:center;gap:8px;font-size:14px">
+        <input type="checkbox" name="kvkk" required style="width:auto;margin:0">
+        <span><a href="kvkk.html" target="_blank">KVKK</a> aydınlatma metnini okudum, kabul ediyorum.</span>
+      </label>
       <button class="btn" type="submit">Gönder</button>
-      <p class="hint" id="formStatus" role="status" aria-live="polite"></p>
     </form>
   </div>
 </section>
-<script>
-document.getElementById('contactForm')?.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const f = e.target;
-  if (!f.checkValidity()) { f.reportValidity(); return; }
-  f.querySelectorAll('input,textarea,button').forEach(el => el.disabled = true);
-  document.getElementById('formStatus').textContent = 'Teşekkürler — prototip olduğu için gönderilmedi.';
-});
-</script>
 
 </main>
 <footer>
 <div class="wrap">
   <div>
-    <div>© 2026 Asel Havalı El Aletleri — Prototip</div>
+    <div>© 2026 Asel Havalı El Aletleri</div>
     <div style="margin-top:6px">İvedik OSB Mah. 1419. Cad. No:76 Yenimahalle / Ankara</div>
     <div style="margin-top:4px"><a href="mailto:info@aselelaletleri.com">info@aselelaletleri.com</a> · <a href="tel:+903123122735">0 (312) 312 27 35</a></div>
   </div>

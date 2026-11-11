@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bayi Başvuru | Asel Havalı El Aletleri</title>
+<meta name="description" content="Asel yetkili bayisi olmak için başvurun.">
+<meta name="theme-color" content="#fbfbfd">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+<style>
+.bayi-hero{padding:80px 0 40px;text-align:center}
+.bayi-hero h1{font-size:clamp(2rem,5vw,3rem);margin-bottom:0.5rem}
+.bayi-form{max-width:700px;margin:48px auto;background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:32px}
+.bayi-form label{display:block;margin-bottom:16px;font-size:15px;font-weight:500}
+.bayi-form input,.bayi-form textarea,.bayi-form select{width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:8px;font-size:16px;margin-top:6px;background:var(--bg)}
+.bayi-form textarea{min-height:100px;resize:vertical}
+.bayi-form button{margin-top:24px}
+</style>
+</head>
+<body>
+<a class="skip" href="#icerik">İçeriğe geç</a>
+<nav class="nav" aria-label="Ana menü"><div class="in">
+<a class="logo" href="index.html" aria-label="Asel ana sayfa">AS<span>E</span>L</a>
+<button class="burger" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="navlinks">☰</button>
+<div class="links" id="navlinks">
+<a href="index.html">Ana Sayfa</a>
+<a href="kategoriler.html">Ürünler</a>
+<a href="satis-noktalari.html">Satış Noktaları</a>
+<a href="sertifikalar.html">Sertifikalar</a>
+<a href="hakkimizda.html">Hakkımızda</a>
+<a href="iletisim.html">İletişim</a>
+<a href="https://aselelaletleri.com/wp-content/uploads/2026/03/ASEL-KATALOG.pdf" target="_blank">Katalog</a>
+</div>
+</div></nav>
+<main id="icerik">
+
+<div class="bayi-hero wrap">
+<h1>Bayi Başvuru</h1>
+<p class="lead">Asel yetkili bayisi olmak için aşağıdaki formu doldurun</p>
+</div>
+
+<form class="wrap bayi-form" method="post" action="mailto:info@aselelaletleri.com" enctype="text/plain">
+<label>Ad Soyad *<input name="ad" required></label>
+<label>Firma Ünvanı *<input name="firma" required></label>
+<label>Telefon *<input type="tel" name="telefon" required></label>
+<label>E-posta *<input type="email" name="eposta" required></label>
+<label>Şehir *<input name="sehir" required></label>
+<label>İlçe *<input name="ilce" required></label>
+<label>Vergi Dairesi<input name="vergi_dairesi"></label>
+<label>Vergi No<input name="vergi_no"></label>
+<label>Adres *<textarea name="adres" required></textarea></label>
+<label>Mesaj<textarea name="mesaj"></textarea></label>
+<label style="display:flex;align-items:center;gap:8px;font-size:14px">
+<input type="checkbox" name="kvkk" required style="width:auto;margin:0">
+<span><a href="kvkk.html" target="_blank">KVKK</a> aydınlatma metnini okudum, kabul ediyorum.</span>
+</label>
+<button class="btn" type="submit">Başvuruyu Gönder</button>
+</form>
+
+</main>
+
+<footer class="footer">
+<div class="in wrap">
+<div class="col">
+<div class="logo">AS<span>E</span>L</div>
+<p>İnovasyonun Gücü, ASEL Havalı El Aletleriyle Ellerinizde!</p>
+</div>
+<div class="col">
+<h4>Ürünler</h4>
+<a href="kategoriler.html">Tüm Ürünler</a>
+<a href="urun-asht-4050012.html">ASHT‑4050012</a>
+<a href="urun-asht-40412.html">ASHT‑40412</a>
+<a href="urun-asht-40512.html">ASHT‑40512</a>
+</div>
+<div class="col">
+<h4>Kurumsal</h4>
+<a href="hakkimizda.html">Hakkımızda</a>
+<a href="satis-noktalari.html">Satış Noktaları</a>
+<a href="sertifikalar.html">Sertifikalar</a>
+<a href="sss.html">S.S.S</a>
+<a href="https://aselelaletleri.com/wp-content/uploads/2026/03/ASEL-KATALOG.pdf" target="_blank">Katalog</a>
+</div>
+<div class="col">
+<h4>İletişim</h4>
+<a href="iletisim.html">İletişim Formu</a>
+<a href="bayi-basvuru.html">Bayi Başvuru</a>
+<p style="font-size:14px;margin-top:8px">İvedik OSB mah. 1419.Cad. No:76<br>Yenimahalle / Ankara</p>
+<p style="font-size:14px"><a href="tel:+903123122735">0 (312) 312 2735</a></p>
+</div>
+</div>
+<div class="base wrap">
+<p>&copy; 2026 Asel Havalı El Aletleri. Tüm hakları saklıdır.</p>
+<div><a href="kvkk.html">KVKK</a><a href="cerez-politikasi.html">Çerez Politikası</a><a href="iade-politikasi.html">İade Politikası</a><a href="mesafeli-satis.html">Mesafeli Satış</a></div>
+</div>
+</footer>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>
