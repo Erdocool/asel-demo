@@ -307,3 +307,31 @@ document.body.appendChild(whatsappBtn);
     }
   });
 })();
+
+// Simple i18n language switcher
+(function() {
+  let currentLang = localStorage.getItem('lang') || 'tr';
+  
+  // Create language switcher
+  const langSwitch = document.createElement('div');
+  langSwitch.className = 'lang-switch';
+  langSwitch.innerHTML = `
+    <button data-lang="tr" class="${currentLang === 'tr' ? 'active' : ''}">TR</button>
+    <button data-lang="en" class="${currentLang === 'en' ? 'active' : ''}">EN</button>
+  `;
+  document.body.appendChild(langSwitch);
+  
+  langSwitch.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.dataset.lang;
+      localStorage.setItem('lang', lang);
+      
+      // For now, just show alert - full implementation would need translated pages
+      if (lang === 'en' && currentLang !== 'en') {
+        alert('English version coming soon! / İngilizce sürüm yakında!');
+      } else {
+        location.reload();
+      }
+    });
+  });
+})();

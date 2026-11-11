@@ -278,3 +278,13 @@ footer a:hover{color:var(--acc)}
 .search-btn{top:16px;right:16px;width:40px;height:40px}
 .search-modal{width:95%;margin:0 auto}
 }
+
+/* Language switcher */
+.lang-switch{position:fixed;top:20px;right:140px;display:flex;gap:4px;z-index:1001}
+.lang-switch button{padding:8px 12px;background:var(--bg);border:1px solid var(--border);border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s}
+.lang-switch button.active{background:var(--acc);color:#fff;border-color:var(--acc)}
+.lang-switch button:hover:not(.active){background:var(--alt)}
+@media(max-width:768px){
+.lang-switch{top:70px;right:16px;gap:6px}
+.lang-switch button{padding:6px 10px;font-size:12px}
+}
