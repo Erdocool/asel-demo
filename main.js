@@ -310,7 +310,10 @@ document.body.appendChild(whatsappBtn);
 
 // Simple i18n language switcher
 (function() {
-  let currentLang = localStorage.getItem('lang') || 'tr';
+  const currentPath = window.location.pathname;
+  const fileName = currentPath.split('/').pop() || 'index.html';
+  const isEnglish = fileName.includes('-en.html');
+  let currentLang = isEnglish ? 'en' : 'tr';
   
   // Create language switcher
   const langSwitch = document.createElement('div');
@@ -324,14 +327,23 @@ document.body.appendChild(whatsappBtn);
   langSwitch.querySelectorAll('button').forEach(btn => {
     btn.addEventListener('click', () => {
       const lang = btn.dataset.lang;
-      localStorage.setItem('lang', lang);
       
-      // For now, just show alert - full implementation would need translated pages
-      if (lang === 'en' && currentLang !== 'en') {
-        alert('English version coming soon! / İngilizce sürüm yakında!');
+      if (lang === currentLang) return;
+      
+      // Map page names
+      let targetPage = fileName;
+      if (lang === 'en') {
+        // Switch to English version
+        if (!fileName.includes('-en.html')) {
+          targetPage = fileName.replace('.html', '-en.html');
+        }
       } else {
-        location.reload();
+        // Switch back to Turkish
+        targetPage = fileName.replace('-en.html', '.html');
       }
+      
+      // Navigate to the translated page
+      window.location.href = targetPage;
     });
   });
 })();
