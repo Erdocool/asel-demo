@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dealersmız | Asel Havalı El Aletleri</title>
+<meta name="description" content="Türkiye genelindeki Asel yetkili satış noktalarımızı keşfedin. 37 ilde 92 bayi noktası.">
+<meta name="theme-color" content="#fbfbfd">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+<style>
+.dealers-hero{padding:80px 0 40px;text-align:center}
+.dealers-hero h1{font-size:clamp(2rem,5vw,3rem);margin-bottom:0.5rem}
+.dealers-search{max-width:600px;margin:2rem auto}
+.dealers-search input,.dealers-search select{width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:12px;font-size:16px;margin-bottom:12px;background:var(--bg)}
+.featured-dealer{background:var(--alt);border-radius:16px;padding:32px;margin:32px 0}
+.featured-dealer h3{font-size:1.5rem;margin-bottom:1rem}
+.map-container{border-radius:16px;overflow:hidden;height:400px;margin:32px 0}
+.map-container iframe{width:100%;height:100%;border:none}
+.dealers-table-wrap{overflow-x:auto;margin:32px 0}
+.dealers-table{width:100%;border-collapse:collapse;font-size:14px}
+.dealers-table th{background:var(--alt);padding:12px;text-align:left;font-weight:600;position:sticky;top:0}
+.dealers-table td{padding:12px;border-bottom:1px solid var(--border)}
+.dealers-table tr:hover{background:var(--alt)}
+.dealers-table td:nth-child(1){font-weight:600}
+@media (max-width:768px){
+.dealers-table{font-size:12px}
+.dealers-table th,.dealers-table td{padding:8px 4px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#icerik">Skip to content</a>
+<nav class="nav" aria-label="Main menu"><div class="in">
+<a class="logo" href="index-en.html" aria-label="Asel homepage"><img src="assets/asel-logo.svg" alt="ASEL" style="height:32px;width:auto"></a>
+<button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks">☰</button>
+<div class="links" id="navlinks">
+<a href="index-en.html">Home</a>
+<a href="kategoriler-en.html">Products</a>
+<a href="satis-noktalari-en.html">Dealers</a>
+<a href="sertifikalar-en.html">Certificates</a>
+<a href="hakkimizda-en.html">About</a>
+<a href="iletisim-en.html">Contact</a>
+<a href="assets/ASEL-KATALOG-2026.pdf" target="_blank">Catalog</a>
+</div>
+</div></nav>
+<main id="icerik">
+
+<div class="dealers-hero wrap">
+<h1>Dealersmız</h1>
+<p class="lead">Türkiye genelinde 37 ilde 90+ yetkili satış noktamızla hizmetinizdeyiz</p>
+</div>
+
+<div class="wrap dealers-search">
+<input type="text" id="searchInput" placeholder="Bayi adı, il veya ilçe ara..." aria-label="Bayi ara">
+<select id="provinceFilter" aria-label="İl filtrele">
+<option value="">Tüm İller</option>
+</select>
+</div>
+
+<div class="wrap featured-dealer">
+<h3>🏆 Featured Dealermiz</h3>
+<h4 style="margin:0.5rem 0">Ortaklar Teknik</h4>
+<p style="margin:0.5rem 0"><strong>İl:</strong> İstanbul</p>
+<p style="margin:0.5rem 0"><strong>Address:</strong> Cevizli Mahallesi, Tugay Yolu Caddesi No:67, Maltepe, İstanbul</p>
+<p style="margin:0.5rem 0"><strong>Phone:</strong> <a href="tel:+902163999191">0216 399 91 91</a></p>
+</div>
+
+<div class="wrap map-container">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d28.849458!3d41.015137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2zxLBzdGFuYnVs!5e0!3m2!1str!2str!4v1699700000000!5m2!1str!2str" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Türkiye haritası - Asel satış noktaları"></iframe>
+</div>
+
+<div class="wrap dealers-table-wrap">
+<table class="dealers-table" id="dealersTable">
+<thead>
+<tr>
+<th>İl</th>
+<th>Unvan</th>
+<th>Address</th>
+<th>İlçe</th>
+<th>Phone</th>
+</tr>
+</thead>
+<tbody id="dealersBody"></tbody>
+</table>
+</div>
+
+</main>
+
+<footer class="footer">
+<div class="in wrap">
+<div class="col">
+<div class="logo">AS<span>E</span>L</div>
+<p>İnovasyonun Gücü, ASEL Pneumatic Toolsyle Ellerinizde!</p>
+</div>
+<div class="col">
+<h4>Products</h4>
+<a href="kategoriler-en.html">Tüm Products</a>
+<a href="urun-asht-4050012.html">ASHT‑4050012</a>
+<a href="urun-asht-40412.html">ASHT‑40412</a>
+<a href="urun-asht-40512.html">ASHT‑40512</a>
+</div>
+<div class="col">
+<h4>Corporate</h4>
+<a href="hakkimizda-en.html">About</a>
+<a href="satis-noktalari-en.html">Dealers</a>
+<a href="sertifikalar-en.html">Certificates</a>
+<a href="sss-en.html">FAQ</a>
+<a href="assets/ASEL-KATALOG-2026.pdf" target="_blank">Catalog</a>
+</div>
+<div class="col">
+<h4>Social Media</h4>
+<a href="https://www.facebook.com/aselelaletleri/" target="_blank" rel="noopener">Facebook</a>
+<a href="https://www.instagram.com/aselelaletleri/" target="_blank" rel="noopener">Instagram</a>
+</div>
+<div class="col">
+<h4>Contact</h4>
+<a href="iletisim-en.html">Contact Formu</a>
+<a href="bayi-basvuru-en.html">Bayi Başvuru</a>
+<p style="font-size:14px;margin-top:8px">İvedik OSB mah. 1419.Cad. No:76<br>Yenimahalle / Ankara</p>
+<p style="font-size:14px"><a href="tel:+903123122735">0 (312) 312 2735</a></p>
+<div style="margin-top:12px;display:flex;align-items:center;gap:8px;font-size:14px;color:var(--mute)">
+<span>A Kılıç Grup company</span>
+<img src="assets/kilic-logo.svg" alt="Kılıç Grup" style="height:24px;width:auto">
+</div>
+</div>
+</div>
+<div class="base wrap">
+<p>&copy; 2026 Asel Havalı El Aletleri. All rights reserved.</p>
+<div><a href="kvkk.html" class="tr-only">KVKK</a><a href="cerez-politikasi.html" class="tr-only">Çerez Politikası</a><a href="iade-politikasi.html" class="tr-only">İade Politikası</a><a href="mesafeli-satis.html" class="tr-only">Mesafeli Satış</a></div>
+</div>
+</footer>
+
+<script type="module" src="main.js"></script>
+<script>
+const dealersData=[{"il":"DİYARBAKIR","unvan":"21 TEKNİK HIRD. TAAH. SAN. TİC. LTD.ŞTİ.","adres":"TALAYTEPE MAH. 4. SANAYİ SİTESİ","ilce":"KAYAPINAR","il2":"DİYARBAKIR","telefon1":"0530 841 48 21","telefon2":"(0412) 339 00 11"},{"il":"KONYA","unvan":"42 CİVATA HIRD.SAN.TİC.LTD.ŞTİ.","adres":"NİŞANTAŞI MAH. İLBAL SOK. NO:6/B","ilce":"SELÇUKLU","il2":"KONYA","telefon1":"0506 205 78 29","telefon2":"0533 482 42 99"},{"il":"KARAMAN","unvan":"9K TEKNİK HIRDAVAT RULMAN VE MAK. SAN. TİC.LTD.ŞTİ","adres":"HAMİDİYE MAH. 2170. SOK. NO:8C","ilce":"MERKEZ","il2":"KARAMAN","telefon1":"0545 455 63 72","telefon2":""},{"il":"ADANA","unvan":"ACIMAK MAKİNA TURZ. İNŞ. SAN . VE TİC. LTD. ŞTİ.","adres":"KIZILAY CAD. NO:75","ilce":"SEYHAN","il2":"ADANA","telefon1":"0322 359 06 06","telefon2":""},{"il":"ANKARA","unvan":"ADER GRUP HIRD.ELEKT.INŞ.BOYA SAN. TIC..LTD.STI","adres":"İVEDİK OSB MAHALLESİ 1467 CADDE KÖŞE İVEDİK İ","ilce":"YENIMAHALLE","il2":"ANKARA","telefon1":"0 541 204 71 0","telefon2":"0 312 394 10 21"},{"il":"TRABZON","unvan":"AKSAKAL TİCARET – LUTFULLAH AKSAKAL","adres":"SANAYİ SİT. 14. BLOK NO:1","ilce":"D.DERE","il2":"TRABZON","telefon1":"0533 433 11 12","telefon2":"0462 325 40 66"},{"il":"ANKARA","unvan":"AKÇA KARDEŞLER CİV.VE HIRDAVAT-İLHAMİ AKÇA","adres":"SERHAT ALINTERİ BLV. NO:29","ilce":"YENIMAHALLE","il2":"ANKARA","telefon1":"0312 954 94 10","telefon2":""},{"il":"ANKARA/OSTİM","unvan":"AKİFSAN MAKİNA SAN.TİC.LTD.ŞTİ.","adres":"100.YIL BULVARI AHİ EVRAN CAD.","ilce":"YENİMAHALLE","il2":"ANKARA","telefon1":"","telefon2":"0312 3544391"},{"il":"KONYA","unvan":"ALFA KRİKO GARAJ EKİPMANLARI SAN. VE TİC. LTD. ŞTİ","adres":"FEVZİÇAKMAK MAHALLESİ BÜSAN ÖZEL OSB BLG.","ilce":"KARATAY","il2":"KONYA","telefon1":"0511 193 34 64","telefon2":"0537 3476397"},{"il":"ANKARA","unvan":"ARICI OTOMOTİV YATIRIM A.Ş.","adres":"SASMAZ OTO SAN. SIT. BAHCEKAPI MAH. 2512 SK.","ilce":"ETIMESGUT","il2":"ANKARA","telefon1":"0312 278 61 01","telefon2":""},{"il":"ANKARA","unvan":"ARINTEK HIRDV. TEK. YAPI. MAL. SAN. TİC. LTD ŞTİ .","adres":"ALINTERİ BULV. NO:86","ilce":"YENİMAHALLE","il2":"ANKARA","telefon1":"0312 385 04 66","telefon2":""},{"il":"BOLU","unvan":"ARKUTLAR DERİ MAKİNE YEDEK PARÇA SAN.TİC. LTD. ŞTİ","adres":"BAHÇELİEVLER MAH. SAN. SİT. KÜME EVLERİ","ilce":"GEREDE","il2":"BOLU","telefon1":"","telefon2":""},{"il":"AKSARAY","unvan":"ARMA HIRDAVAT MÜTAHİTLİK İNŞ. DEKOR İZL. SAN. VE TİC. LTD. ŞTİ","adres":"BAHÇE SARAY MH. 8611. SK. NO:3/A","ilce":"MERKEZ","il2":"AKSARAY","telefon1":"0382 215 61 65","telefon2":""},{"il":"ANKARA","unvan":"ASEKA OTOMOTİV YEDEK PARÇA HIRD İNŞ. SAN. TİC. LTD. ŞTİ.","adres":"BAHÇEKAPI MAH. 2747.CD.","ilce":"ETİMESGUT","il2":"ANKARA","telefon1":"","telefon2":""},{"il":"ANKARA","unvan":"ASİL TOPTAN HIRD. İŞ SAĞ. VE GÜV. EKİPMANLARI SAN.","adres":"İVEDİk OSB. MAH. 1372.SOK NO:26/A","ilce":"YENİMAHALLE","il2":"ANKARA","telefon1":"","telefon2":""},{"il":"İSTANBUL","unvan":"ATEK MAKİNE SANAYİ VE TİCARET AŞ","adres":"ATATÜRK MH.HADIMKÖY YOLU ÜZERİ","ilce":"ESENYURT","il2":"İSTANBUL","telefon1":"0533 201 88 51","telefon2":""},{"il":"KAYSERİ","unvan":"AYDOĞDU BAĞ. ELM. TEK. İNŞ. MOB. OTO. İTH. İHR.","adres":"ANBAR MAH. DEMİRCİLER SİT. 26.CAD. NO:57","ilce":"MELİKGAZI","il2":"KAYSERİ","telefon1":"0352 311 39 09","telefon2":""},{"il":"İSTANBUL","unvan":"BAYRAMOĞLU HIRDAVAT DIŞ. TİC. LTD. ŞTİ. /3","adres":"MAHUTBEY MAH.2434.SOKAK,NO:147","ilce":"BAĞCILAR","il2":"İSTANBUL","telefon1":"","telefon2":"05305003838"},{"il":"KONYA","unvan":"BAŞARAN HİDR.HRD. OTO.İTH..İHR.SAN.TİC.LTD.ŞTİ.","adres":"BÜYÜK YAKACIK MAH. KOS. BÖL. KUDDUSİ CD.","ilce":"SELÇUKLU","il2":"KONYA","telefon1":"0312 248 15 64","telefon2":""},{"il":"ANKARA","unvan":"BEST E YAPI MALZ. MAK. METAL SAN. VE TİC. LTD.ŞTİ","adres":"OSTİM OSB. MAH. ALINTERİ BUL. NO:162","ilce":"YENİMAHALLE","il2":"ANKARA","telefon1":"0530 702 33 90","telefon2":"0312 272 1905"},{"il":"KONYA","unvan":"BOLTSAN CİVATA HIRDAVAT SAN. VE TİC. LTD.ŞTİ.","adres":"FEVZİ CAKMAK MAH. BUSAN ÖZEL ORG. SAN.","ilce":"KARATAY","il2":"KONYA","telefon1":"0332 246 1177","telefon2":"0546 416 88 79"},{"il":"DİYARBAKIR","unvan":"BUHARA TİCARET- MEHMET ERDEM","adres":"FIRAT MAH. 3.SANAYİ SİTESİ 2.SOKAK","ilce":"KAYAPINAR","il2":"DİYARBAKIR","telefon1":"0537 764 25 38","telefon2":""},{"il":"AMASYA","unvan":"BİNBİR ÇEŞİT DURSUN KARACA/05","adres":"KÜÇÜK SANAYİ SİTESİ C/4BLOK NO:5 AMASYA","ilce":"AMASYA","il2":"AMASYA","telefon1":"","telefon2":"05322781524"},{"il":"ŞANLIURFA","unvan":"DAĞYUTAN MAKİNA İNŞAAT SANAYİ VE TİCARET LTD. ŞTİ","adres":"EVREN SAN. SİT. 1.CD. 6.SK. NO:30","ilce":"MERKEZ","il2":"ŞANLIURFA","telefon1":"0414 357 60 30","telefon2":""},{"il":"ANKARA","unvan":"DD HIRDAVAT İNŞ. YAPI MALZ. SAN. VE TİC. LTD. ŞTİ.","adres":"İvedik OSB, Melih Gökçek Blv. No: 125/A, 0637","ilce":"YENİMAHALLE","il2":"ANKARA","telefon1":"0541 306 04 39","telefon2":""},{"il":"ANKARA/İVEDİK","unvan":"DEFNE BAĞLANTI ELEMANLARI CİVATA SAN.LTD.ŞTİ.","adres":"İVEDIK OSB. MELİH GÖKCEK BULV.","ilce":"YENİMAHALLE","il2":"ANKARA","telefon1":"","telefon2":"0534 4946822"},{"il":"KAYSERİ","unvan":"DENMAK TEKNİK HIRDV. SAN. VE TİC. MAK. OTO SER.","adres":"YENİ SAN. SİT. GAZALİ CAD. NO:53","ilce":"KOCASİNAN","il2":"KAYSERİ","telefon1":"0352 336 91 44","telefon2":""},{"il":"ANKARA/İVEDİK","unvan":"DERYA HIRDAVAT YAPI MARK.LTD.ŞTİ.","adres":"ALINTERİ BULV. NO:74","ilce":"YENİMAHALLE","il2":"ANKARA","telefon1":"","telefon2":""},{"il":"ANKARA /İVEDİK","unvan":"EKOL ANKARA MAKİNA HIRD. SAN. TİC. LTD.ŞTİ.","adres":"İVEDİK OSB. MAH. MELİH GÖKÇEK BULVARI NO:63/1","ilce":"YENİMAHALLE","il2":"ANKARA","telefon1":"0312 349 00 00","telefon2":""},{"il":"ANKARA/GÖLBAŞI","unvan":"ELVAN SOYLU","adres":"ŞAFAK MAH. 860 CAD. NO:4 GÖLBAŞI SAN. SİT.","ilce":"GÖLBAŞI","il2":"ANKARA","telefon1":"0532 460 96 24","telefon2":""},{"il":"SAMSUN","unvan":"EMRE TEKNİK FABRİKA MALZ. İŞ GÜV. İTHL. İHR. SAN.","adres":"ŞABANOĞLU MAH. ADNAN KAHVECİ BULV.","ilce":"TEKKEKÖY","il2":"SAMSUN","telefon1":"","telefon2":"0850 3033395"},{"il":"ÇORUM","unvan":"ER TİCARET MAK.HIRD.SANAYİ GAZ.TİC.SAN.A.Ş","adres":"ANKARA YOLU BULVARI NO:39 ÇORUM","ilce":"ÇORUM","il2":"ÇORUM","telefon1":"03643331010","telefon2":"05559980180"},{"il":"ANKARA","unvan":"EREN KARDEŞLER TEK.CİVATA HIRD. OTO.SAN. TİC.LTD.Ş","adres":"İVEDİK ORG. SAN. 1482 CAD. NO:2-4","ilce":"YENİMAHALLE","il2":"ANKARA","telefon1":"0312 395 46 73","telefon2":""},{"il":"ANKARA/OSTİM","unvan":"GENÇ DİNAMİK HIRD CIVATA MAK SAN TİC LTD ŞTİ","adres":"1174.CAD.","ilce":"YENİMAHALLE","il2":"ANKARA","telefon1":"","telefon2":""},{"il":"ANKARA/OSTİM","unvan":"GÖKTAŞ TEKNIK HIRDAVAT MAK İNŞ SAN VE TİC LTD ŞTİ","adres":"OSTIM OSB MAH 100.YIL BULV.NO:55/B","ilce":"YENİMAHALLE","il2":"ANKARA","telefon1":"0533 406 08 99","telefon2":""},{"il":"ŞANLIURFA","unvan":"HAMZA TİCARET MEHMET CULUM /63","adres":"EVREN SANAYİ SİTESİ 1.CADDE 4.SOKAKNO:18","ilce":"EYYUBİYE","il2":"ŞANLIURFA","telefon1":"05432304848","telefon2":""},{"il":"SAKARYA","unvan":"SAKARYAFİX HİD. KRİKO VE SERV. EKİPMANLARI İMALATI","adres":"HANLI MERKEZ MH. 54.SK NO:54","ilce":"","il2":"","telefon1":"0532 205 33 54","telefon2":""},{"il":"ANKAA/OSTİM","unvan":"HİDROGÜR HİDROLİK PNÖMATİK SAN .TİC. LTD.ŞTİ.","adres":"100.YIL BULVARI 1234.SK.NO:87","ilce":"OSTİM","il2":"ANKARA","telefon1":"0312 354 14 16","telefon2":""},{"il":"KONYA","unvan":"KONELTAŞ EL ALETLERİ HIRD. SAN. TIC. LTD. ŞTI.","adres":"MEVLEDİ CAD. NO:24/C","ilce":"KARATAY","il2":"KONYA","telefon1":"0544 120 02 86","telefon2":""},{"il":"KAYSERİ","unvan":"KUTSAL BAĞLANTI ELEMANLARI SAN. TİC. LTD. ŞTİ.","adres":"KAYSERİ OSB. MAH. 6.CAD. NO:18/3","ilce":"MELİKGAZİ","il2":"KAYSERİ","telefon1":"0352 333 35 00","telefon2":""},{"il":"ANKARA","unvan":"KUTUP OTOMOTİV SAN.TİC.LTD.ŞTİ","adres":"UZAYÇAĞI CAD.ÇAGRI İŞ MERKEZİ NO:140/5","ilce":"YENIMAHALLE","il2":"ANKARA","telefon1":"0312 385 65 08","telefon2":"0312 385 65 08"},{"il":"ADANA","unvan":"KUVVET MAKİNA TOPT. PERAKENDE TEK. HIRDAVAT","adres":"KARASOKU MH. KIZILAY CAD. NO:26","ilce":"SEYHAN","il2":"ADANA","telefon1":"0536 686 82 64","telefon2":""},{"il":"KAYSERİ","unvan":"KUZEY HIRDAVAT","adres":"OSMAN KOYUNCU MAH. OSMAN KOYUNCU BLV.","ilce":"MELİKGAZİ","il2":"KAYSERİ","telefon1":"0544 810 04 02","telefon2":""},{"il":"GAZİANTEP","unvan":"MAKİNAM AVM TEK. HIRD. VE MAKİNA. ANM. ŞİRKETİ","adres":"BAŞPINAR OSB MAH. ASB. 2. BÖL. CELAL DOĞAN","ilce":"ŞEHİTKAMİL","il2":"GAZİANTEP","telefon1":"0543 456 01 99","telefon2":""},{"il":"DİYARBAKIR","unvan":"MELİKHAN TİCARET İNŞ. PET. SAN. TİC.LTD.ŞTİ","adres":"SANAYİ SİT. 10. BLOK NO: 44","ilce":"","il2":"DİYARBAKIR","telefon1":"0552 720 30 12","telefon2":"0412 228 03 26"},{"il":"ANKARA/İVEDİK","unvan":"MEOS MAKİNA SAN. TİC. LTD. ŞTİ.","adres":"İVEDİ OSB MAHALLESİ MELİH GÖKÇEK BULV. 17/8","ilce":"YENİMAHALLE","il2":"ANKARA","telefon1":"","telefon2":""},{"il":"MARDİN","unvan":"MERKEZ NALBURİYE İNŞ. SAN. TİC. LTD. ŞTİ.","adres":"OFİS MAH. SANAYİ SİT. 5 SK. NO:10","ilce":"ARTUKLU","il2":"MARDİN","telefon1":"0531 431 00 02","telefon2":""},{"il":"İSTANBUL","unvan":"MERT OTOMOTİV SANAYİ VE TİCARET PAZARLAMA LTD.ŞTİ.","adres":"MİMAR SİNAN MAHALLESİ ÜSKÜDAR CADDESİ YEDPA T","ilce":"ATAŞEHİR","il2":"İSTANBUL","telefon1":"","telefon2":"0216 4711119"},{"il":"ERZURUM","unvan":"ANADOLU TEKNİK","adres":"SANAYİ SİİTESİ 3. BLK. NO:33","ilce":"ERZURUM","il2":"ERZURUM","telefon1":"0536 033 4178","telefon2":""},{"il":"ANKARA","unvan":"MUTLUCA YAPI SANAYİ TİC. LTD. ŞTİ.","adres":"SARAY MAHALLESİ 175 CADDE NO:7/1","ilce":"KAHRAMANKAZAN","il2":"ANKARA","telefon1":"0532 404 83 59","telefon2":""},{"il":"ANKARA/İVEDİK","unvan":"NOYA TOPTAN İNŞ. MALZ. LTD. ŞTİ.","adres":"İVEDİK OSB. 1366 CD. NO:2/2","ilce":"YENİMAHALLE","il2":"ANKARA","telefon1":"0534 625 9449","telefon2":"0312 350 25 40"},{"il":"VAN","unvan":"NURETTİNOĞULLARI İNŞ. KUN.PET. ÜRN. SAN. TİC.LTD.","adres":"SIHKE CAD. BEYAZ ÇARŞI NO:34","ilce":"İPEKYOLU","il2":"VAN","telefon1":"0538 343 77 42","telefon2":"0432 215 03 72"},{"il":"VAN","unvan":"NİRVANA MAKINE VE HIRDAVAT- YUSUF DİKICİ","adres":"SEYRANTEPE MAH. SANAYİ SİTESİ","ilce":"TUŞPA","il2":"VAN","telefon1":"","telefon2":"0555 0643080"},{"il":"ANKARA","unvan":"ORTAK CIVATA HIRDAVAT İNŞ. SAN. VE TİC.LTD.ŞTİ.","adres":"","ilce":"","il2":"","telefon1":"","telefon2":"0312 3958381"},{"il":"İSTANBUL","unvan":"ORTAKLAR TEKNİK HIRD. İTH. VE TİC.LTD.ŞTİ.","adres":"ERDOĞANLAR İŞ MERKEZİ TERSANE KAVŞAĞI","ilce":"BEYOĞLU","il2":"İSTANBUL","telefon1":"0532 3575191","telefon2":""},{"il":"GAZİANTEP","unvan":"OSMAN KÜLEKÇİ OĞULLARI TEK. MAK. SAN. MLZ. TİC.LTD","adres":"BAŞPINAR OSB MAH. OSB.2. BÖL. CELAL DOĞAN BLV","ilce":"ŞEHİTKAMİL","il2":"GAZİANTEP","telefon1":"","telefon2":""},{"il":"ANKARA/OSTİM","unvan":"OSTİM MEGA MAKİNA TEKNİK HIRD. VE TİCARET AŞ.","adres":"100.YIL BULV.","ilce":"OSTİM","il2":"ANKARA","telefon1":"","telefon2":"0312 3548484"},{"il":"KONYA","unvan":"PEK BAĞ. ELEM. SAN. VE TİC. LTD.ŞTİ.","adres":"BÜSAN ORG. SAN. KOSGEB CD. 48","ilce":"KARATAY","il2":"KONYA","telefon1":"0332 345 00 56","telefon2":""},{"il":"İZMİR","unvan":"RULPAR MAK. YED. PARÇA LTD. ŞT.","adres":"2822 SOK. NO:7","ilce":"KONAK","il2":"İZMİR","telefon1":"0232 433 97 85","telefon2":""},{"il":"ANKARA/OSTİM","unvan":"S.E.T.KAY SANAYİ MAKİNALARI TİC.LTD.STİ.","adres":"ABDULKADİR GEYLANİ CAD.","ilce":"YENİMAHALLE","il2":"ANKARA","telefon1":"","telefon2":"0312 3547979"},{"il":"KONYA","unvan":"SANAYİ MARKET HIRD. OTOM. BOYA KİMYA İNŞ. SAN.VE","adres":"BUSAN SAN. KOSGEB CAD.","ilce":"KARATAY","il2":"KONYA","telefon1":"","telefon2":"0332 3455078"},{"il":"MERKEZ/SİVAS","unvan":"SENKO HIRDAVAT TİCARET VE SAN. LTD.ŞTİ.","adres":"GÜLTEPE MAH. ULAŞ CD. NO: 19","ilce":"MERKEZ","il2":"SİVAS","telefon1":"0545 527 00 58","telefon2":""},{"il":"BURSA","unvan":"SEZGİN GÜNEY İNŞ.HIRD. TUR.TEK. GID.NAK.SAN.TİC.AŞ","adres":"ALAADDİNBEY MHÇ AKANAY SK.","ilce":"NİLÜFER","il2":"BURSA","telefon1":"0533 581 49 76","telefon2":"0224 4419709"},{"il":"ANKARA","unvan":"SNA TEKNİK HIRDAVAT MALZ.MAK.SAN VE TİC LTD ŞTİ","adres":"İVEDİK OSB MAH 1472 CAD NO:38","ilce":"YENIMAHALLE","il2":"ANKARA","telefon1":"","telefon2":"05070734981"},{"il":"HATAY","unvan":"SİNAN VARAN VARAN TEKNİK HIRDAVAT","adres":"MEHMEH AKİF CAD. MURADİYE MAH.NO:84","ilce":"MURADİYE","il2":"HATAY","telefon1":"0 (535) 763 40","telefon2":"0 (532) 060 15 48"},{"il":"ANKARA","unvan":"TAMER MOTORLU ARAÇLAR END. ÜRÜN.PAZ.SAN. TİC.LTD.Ş","adres":"YAKACIK MAH. YAKACIK BULVARI NO:82/A","ilce":"YENİMAHALLE","il2":"ANKARA","telefon1":"0543 966 0629","telefon2":""},{"il":"MARDİN","unvan":"TAN BOBİNAJ TEYAR TAN","adres":"YENİŞEHİR MAH..49. SK. MUSTAFA KANZA-SIDDIK K","ilce":"ARTUKLU","il2":"MARDİN","telefon1":"0530 783 75 47","telefon2":""},{"il":"TOKAT","unvan":"ULUSU MAKİNE HIRD. END. VE MED.GAZ.SAN.TİC.LTD.ŞTİ","adres":"YENİYURT MAHALLESİ GÜRCAN ÖZBEK CAD.","ilce":"MERKEZ","il2":"TOKAT","telefon1":"","telefon2":"0536 2124783"},{"il":"KAYSERİ","unvan":"UMAY BAĞLANTI ELEM. TEK.HIRD. MAK. SAN TİC.LTD.ŞTİ","adres":"OSB 12 CD. NO:7","ilce":"MELİKGAZİ","il2":"KAYSERİ","telefon1":"0531 822 14 14","telefon2":"0352 311 38 60"},{"il":"URFA","unvan":"VANLI TİCARET","adres":"","ilce":"","il2":"URFA","telefon1":"0542 600 34 13","telefon2":""},{"il":"ADANA","unvan":"YADİGAR TEKNİK HIRD. ELK. MAK. PLASTİK. HAYV. TUR","adres":"ULUCAMİ MAH. 25019 SK.","ilce":"SEYHAN","il2":"ADANA","telefon1":"0554 370 28 80","telefon2":"0322 3521520"},{"il":"OSMANİYE","unvan":"YAVUZ HIRDAVAT","adres":"SANAYİ SİTESİ 9. BLOK NO :4","ilce":"MERKEZ","il2":"OSMANİYE","telefon1":"0532 426 96 91","telefon2":"0328 826 06 20"},{"il":"GAZİANTEP","unvan":"YAĞMUR YAPI TEKNİK HIRDAVAT","adres":"MAVİKENT MAH. 135024 NOLU SK. NO:56/A","ilce":"ŞAHİNBEY","il2":"GAZİANTEP","telefon1":"0642 232 71 51","telefon2":""},{"il":"ADANA","unvan":"YILDIRIM CİVATA HIRDAVAT İŞ GÜVENLİĞİ LTD. ŞTİ.","adres":"YEŞİLOVA MAH. 46257 SK. ADANA OTO SAN. SİT. P","ilce":"SEYHAN","il2":"ADANA","telefon1":"","telefon2":""},{"il":"ESKİŞEHİR","unvan":"YÖREL CİVATA HIRD. VE ZİRAİ ÜRÜN. SAN. VE TİC. LTD","adres":"75.YIL MAH. TEKSAN SANAYİ","ilce":"ODUNPAZARI","il2":"ESKİŞEHİR","telefon1":"","telefon2":"0222 2281000"},{"il":"ÇORUM","unvan":"YÜKSELEN MAKİNA SANAYİ VE TİCARET LTD.ŞTİ","adres":"MİMARSİNAN MAH.MUHSİN YAZICIOĞLU CD.NO:2 D191","ilce":"MERKEZ","il2":"ÇORUM","telefon1":"03642132356","telefon2":"05322928756"},{"il":"SİVAS","unvan":"ÇAĞ TEKNİK MAKİNA HIRV. İNŞ. MLZ. TİC.LTD.ŞTİ.","adres":"DEMİRCİLERARDI MH. KAYIRCIK SK. NO:3/A","ilce":"MERKEZ","il2":"SİVAS","telefon1":"0 (533) 452 89","telefon2":""},{"il":"İSTANBUL","unvan":"ÇELEBİ HIRDAVAT TİC. LTD. ŞTİ.","adres":"MAHMUTBEY MAH. 2449.SK.","ilce":"BAĞCILAR","il2":"İSTANBUL","telefon1":"(0553) 679 1703","telefon2":"0212 659 69 34"},{"il":"ANKARA","unvan":"ÇÖZÜM TEKNİK HIRDAVAT MAKİNE SAN. TİC. AŞ.","adres":"OSTİM OSB MAH. ALINTERİ BULVARI NO:58","ilce":"YENİMAHALLE","il2":"ANKARA","telefon1":"","telefon2":"05535789574"},{"il":"MALATYA","unvan":"ÇÖZÜM TEKNİK HAVALI BİJON SÖKME TAMİRAT","adres":"BENTBAŞI MAH. MESLEK SOKAK BAHÇEŞEHİR KONUT.","ilce":"YEŞİLYURT","il2":"MALATYA","telefon1":"0533 350 44 22","telefon2":""},{"il":"ANKARA","unvan":"ÖZAYLAR EL ALETLERİ HIRD. İNŞ. TİC. VE SAN. A.Ş.","adres":"ALINTERİ BULVARI 1177 .SOKAK NO:25","ilce":"YENİMAHALLE","il2":"ANKARA","telefon1":"","telefon2":"0312 3862278"},{"il":"ANKARA","unvan":"ÜLKÜ HIRDAVAT- VEYSİ ÜLKÜ","adres":"GÜLVEREN MAH. 72.SOK. BUSRA NUR APT. NO:5/6","ilce":"MAMAK","il2":"ANKARA","telefon1":"","telefon2":"0532 6832207"},{"il":"BURSA","unvan":"ÜNTAŞ NALBURİYE VE HIRDAVAT","adres":"SİNANBEY MH METAL SAN SİT. 7.METAL SK NO:6H","ilce":"İNEGÖL","il2":"BURSA","telefon1":"","telefon2":""},{"il":"ANKARA","unvan":"İNAN OTOM. LASTİK SERVİS EKİP. ALİ İNAN","adres":"SUSUZ MAH. EHLİBEYT DA. NO:3 B BLK. NO:3A","ilce":"ETİMESGUT","il2":"ANKARA","telefon1":"0551 712 88 79","telefon2":""},{"il":"TEKİRDAĞ","unvan":"MOOR TEKNİK ALETLER HIRDAVAT- NALBUR","adres":"REŞADİYE MAH. ŞEHİT TEĞMEN YAZVUZER CD. NO:47","ilce":"ÇORLU","il2":"TEKİRDAĞ","telefon1":"0505 134 93 59","telefon2":""},{"il":"GAZİANTEP","unvan":"İSOPART OTOMOTİV END. SAN. VE TİC. LTD. ŞTİ.","adres":"SANAYİ MAH. ANAFARLAR BLV. 235/A","ilce":"ŞEHİTKAMİL","il2":"GAZİANTEP","telefon1":"","telefon2":""},{"il":"KONYA","unvan":"AYBAR GıDA MAD. İNŞ. MALZ. CANLI HAYVAN TİC.SAN.","adres":"NAMIK KEMAL MAH. PRF. DR. BAHRİYE ÜÇOK CD.","ilce":"EREĞLİ","il2":"KONYA","telefon1":"","telefon2":""},{"il":"DİYARBAKIR","unvan":"GÜMPA İNŞ. MAK. ELEKT. TEM. SAN.TİC.LTD.ŞTİ.","adres":"1.SAN. SİTESİ 7.SK. NO:5","ilce":"YENİŞEHİR","il2":"DİYARBAKIR","telefon1":"","telefon2":""},{"il":"NİĞDE","unvan":"ORHAN HIRDAVAT SEVİL ÖZER","adres":"İLHANLI MAH. ÇEVRE YOLU CD. SAN. SİT. A5 BLK.","ilce":"","il2":"NİĞDE","telefon1":"","telefon2":""},{"il":"KARAMAN","unvan":"ÇETİNTAŞLAR OTOM.PET. ÜRN. HIRV. İNŞ. TARIM VE","adres":"HAMİDİYE MAH. 684 SK. NO32","ilce":"MERKEZ","il2":"KARAMAN","telefon1":"","telefon2":""},{"il":"ANKARA","unvan":"ENERJİ ÇELİK HALAT HIRDAVAT MAK.İNŞ.İML.SAN. VE TİC. LTD. ŞTİ.","adres":"OSTİM 1201 CADDE NO:2/1-A","ilce":"YENİMAHALLE","il2":"ANKARA","telefon1":"","telefon2":""},{"il":"GAZİNATEP","unvan":"ÖZEREN DOKUMA MALZ.TEKS.SAN. VE TİC.LTD.ŞTİ.","adres":"2. ORGANİZE SAN. BÖLG. SOSYAL TESİS. C12","ilce":"BAŞPINAR","il2":"GAZİANTEP","telefon1":"0312 354 92 85","telefon2":""}];
+
+function renderDealers(dealers){
+const tbody=document.getElementById('dealersBody');
+tbody.innerHTML=dealers.map(d=>`<tr><td>${d.il}</td><td>${d.unvan}</td><td>${d.adres}</td><td>${d.ilce}</td><td>${d.telefon1}${d.telefon2?'<br>'+d.telefon2:''}</td></tr>`).join('');
+}
+
+const provinces=[...new Set(dealersData.map(d=>d.il))].sort();
+const provinceFilter=document.getElementById('provinceFilter');
+provinces.forEach(p=>{
+const opt=document.createElement('option');
+opt.value=p;
+opt.textContent=p;
+provinceFilter.appendChild(opt);
+});
+
+let filteredDealers=dealersData;
+
+function updateTable(){
+renderDealers(filteredDealers);
+}
+
+document.getElementById('searchInput').addEventListener('input',(e)=>{
+const query=e.target.value.toLowerCase();
+const province=provinceFilter.value;
+filteredDealers=dealersData.filter(d=>{
+const matchesSearch=!query||d.unvan.toLowerCase().includes(query)||d.il.toLowerCase().includes(query)||d.ilce.toLowerCase().includes(query)||d.adres.toLowerCase().includes(query);
+const matchesProvince=!province||d.il===province;
+return matchesSearch&&matchesProvince;
+});
+updateTable();
+});
+
+provinceFilter.addEventListener('change',()=>{
+document.getElementById('searchInput').dispatchEvent(new Event('input'));
+});
+
+updateTable();
+</script>
+</body>
+</html>
