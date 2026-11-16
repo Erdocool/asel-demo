@@ -375,3 +375,16 @@ footer .base{border-top-color:rgba(255,255,255,.12)!important}
 .uh-img{display:block;border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.08);border-bottom:4px solid var(--red)}
 .uh-img img{width:100%;height:auto;display:block}
 @media(max-width:734px){.uretim-grid{grid-template-columns:1fr 1fr;gap:8px}.ug-item:last-child{grid-column:span 2}.ug-big{grid-column:span 2;grid-row:auto}.uretim{padding:64px 0}.uretim-home{padding:64px 0}}
+
+/* v5: Canon ürün fotoğrafları (dekupe, açık zemin) */
+.niapro-hero.photo{padding:0;background:#f4f4f6;min-height:0;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line)}
+.niapro-hero.photo picture{display:block;width:100%}
+.niapro-hero.photo .niapro-shot{width:100%;height:auto;max-height:none;filter:none;display:block}
+.photo-gallery{margin-top:16px;grid-template-columns:repeat(3,1fr)}
+.gallery-card img.uph{padding:0;object-fit:cover;background:#f4f4f6}
+.gallery-card picture{display:block}
+.prod-card img.uph{object-fit:contain;background:#f4f4f6}
+#niapro .prod-card img.uph{aspect-ratio:4/3;object-fit:cover}
+.slide .visual.contain.uph{background:#f4f4f6}
+.slide .visual.contain.uph img{position:absolute;inset:0;width:100%;height:100%;padding:0;background:#f4f4f6;object-fit:contain}
+@media(max-width:734px){.photo-gallery{grid-template-columns:1fr 1fr}}
