@@ -388,3 +388,28 @@ footer .base{border-top-color:rgba(255,255,255,.12)!important}
 .slide .visual.contain.uph{background:#f4f4f6}
 .slide .visual.contain.uph img{position:absolute;inset:0;width:100%;height:100%;padding:0;background:#f4f4f6;object-fit:contain}
 @media(max-width:734px){.photo-gallery{grid-template-columns:1fr 1fr}}
+
+/* Ekibimiz / Our team */
+.ekip{padding:96px 0;background:#fff;border-top:1px solid var(--line)}
+.ekip-head{text-align:center;margin-bottom:44px}
+.ekip-head .eyebrow{display:inline-flex;align-items:center;gap:8px}
+.ekip-head .eyebrow::before{content:"";width:18px;height:2px;background:var(--red)}
+.ekip-head p:last-child{color:var(--mute);margin-top:8px}
+.ekip-img{aspect-ratio:1/1;overflow:hidden;border-radius:18px;background:#e6e9ef}
+.ekip-img.white{background:#fff;box-shadow:inset 0 0 0 1px var(--line)}
+.ekip-img img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;display:block}
+.ekip-img.white img{object-position:50% 50%}
+.ekip-gm{display:grid;grid-template-columns:380px 1fr;gap:44px;align-items:center;max-width:900px;margin:0 auto 56px;background:#f5f5f7;border-radius:24px;padding:22px}
+.ekip-gm .ekip-img{aspect-ratio:4/5}
+.ekip-gm figcaption{display:flex;flex-direction:column;gap:10px}
+.ekip-gm strong{font-size:44px;line-height:1.05;letter-spacing:-.02em;color:var(--black)}
+.ekip-role{color:var(--red);font-weight:600;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.ekip-gm i{display:block;width:56px;height:3px;background:var(--red);border-radius:2px;margin-top:6px}
+.ekip-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:22px}
+.ekip-card{margin:0}
+.ekip-card figcaption{padding:14px 2px 0;display:flex;flex-direction:column;gap:4px}
+.ekip-card strong{font-size:17px;line-height:1.25;color:var(--black)}
+.ekip-card span{font-size:14px;color:var(--mute);padding-left:10px;border-left:2px solid var(--red)}
+@media(max-width:1068px){.ekip-grid{grid-template-columns:repeat(3,1fr)}.ekip-gm{grid-template-columns:300px 1fr}.ekip-gm strong{font-size:36px}}
+@media(max-width:734px){.ekip{padding:64px 0}.ekip-gm{grid-template-columns:1fr;gap:18px;padding:14px;margin-bottom:32px}.ekip-gm strong{font-size:30px}.ekip-gm figcaption{padding:0 6px 8px}
+.ekip-grid{grid-template-columns:1fr 1fr;gap:16px}.ekip-card:last-child{grid-column:1/-1;max-width:calc(50% - 8px);justify-self:center;width:100%}.ekip-card strong{font-size:15px}.ekip-card span{font-size:13px}}
