@@ -1,3 +1,10 @@
+function navTools(){
+  const inner=document.querySelector('.nav .in');
+  if(!inner) return null;
+  let t=inner.querySelector('.nav-tools');
+  if(!t){t=document.createElement('div');t.className='nav-tools';inner.appendChild(t);}
+  return t;
+}
 (() => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const supportsVT = 'startViewTransition' in document && CSS.supports('view-transition-name', 'none');
@@ -152,7 +159,7 @@ document.body.appendChild(whatsappBtn);
   banner.className = 'cookie-banner';
   banner.innerHTML = `
     <div class="cookie-content">
-      <p>Bu web sitesi, deneyiminizi iyileştirmek için çerezler kullanmaktadır. Siteyi kullanmaya devam ederek çerez kullanımını kabul etmiş olursunuz. <a href="cerez-politikasi.html" style="color:#0071e3;text-decoration:underline">Daha fazla bilgi</a></p>
+      <p>Bu web sitesi, deneyiminizi iyileştirmek için çerezler kullanmaktadır. Siteyi kullanmaya devam ederek çerez kullanımını kabul etmiş olursunuz. <a href="cerez-politikasi.html" style="color:#E2333B;text-decoration:underline">Daha fazla bilgi</a></p>
       <div class="cookie-buttons">
         <button class="accept" onclick="acceptCookies()">Kabul Et</button>
         <button class="decline" onclick="declineCookies()">Reddet</button>
@@ -234,7 +241,7 @@ document.body.appendChild(whatsappBtn);
     </div>
   `;
   
-  document.body.appendChild(searchBtn);
+  (navTools()||document.body).appendChild(searchBtn);
   document.body.appendChild(searchOverlay);
   
   // Search functionality
@@ -322,7 +329,7 @@ document.body.appendChild(whatsappBtn);
     <button data-lang="tr" class="${currentLang === 'tr' ? 'active' : ''}">TR</button>
     <button data-lang="en" class="${currentLang === 'en' ? 'active' : ''}">EN</button>
   `;
-  document.body.appendChild(langSwitch);
+  { const nt = navTools(); if (nt) nt.prepend(langSwitch); else document.body.appendChild(langSwitch); }
   
   langSwitch.querySelectorAll('button').forEach(btn => {
     btn.addEventListener('click', () => {

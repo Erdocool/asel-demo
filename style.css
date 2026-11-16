@@ -248,8 +248,8 @@ footer a:hover{color:var(--acc)}
 .cookie-banner p{margin:0;flex:1;min-width:280px;font-size:14px;line-height:1.6}
 .cookie-banner .cookie-buttons{display:flex;gap:12px}
 .cookie-banner button{padding:10px 24px;border-radius:8px;font-weight:500;cursor:pointer;font-size:14px;border:none}
-.cookie-banner .accept{background:#0071e3;color:#fff}
-.cookie-banner .accept:hover{background:#0077ed}
+.cookie-banner .accept{background:var(--red);color:#fff}
+.cookie-banner .accept:hover{background:var(--red-hover)}
 .cookie-banner .decline{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.3)}
 .cookie-banner .decline:hover{background:rgba(255,255,255,.1)}
 @media(max-width:768px){
@@ -291,6 +291,72 @@ footer a:hover{color:var(--acc)}
 .map-embed{border-radius:22px;overflow:hidden;background:#f5f5f7;aspect-ratio:16/7;box-shadow:0 1px 3px rgba(0,0,0,.06)}
 .map-embed iframe{width:100%;height:100%;border:0;display:block}
 @media(max-width:700px){.map-embed{aspect-ratio:4/3}}
-.map-embed{border-radius:22px;overflow:hidden;background:#f5f5f7;aspect-ratio:16/7;box-shadow:0 1px 3px rgba(0,0,0,.06)}
-.map-embed iframe{width:100%;height:100%;border:0;display:block}
-@media(max-width:700px){.map-embed{aspect-ratio:4/3}}
+
+/* Nav tools (language + search) live inside the nav bar so they never cover menu links */
+.nav-tools{display:flex;align-items:center;gap:8px;flex:none}
+.nav-tools .lang-switch,.nav-tools .search-btn{position:static;top:auto;right:auto;box-shadow:none}
+.nav-tools .lang-switch{gap:2px}
+.nav-tools .lang-switch button{padding:5px 9px;font-size:11px;border-radius:7px}
+.nav-tools .search-btn{width:32px;height:32px;font-size:15px;border-radius:9px;display:flex;align-items:center;justify-content:center}
+.nav .in .links{flex:1;min-width:0}
+@media(max-width:1100px){.nav .in .links{gap:14px}}
+@media(max-width:820px){.nav .in .logo{margin-right:auto}.nav-tools{order:2}.nav .in .burger{order:3}.nav-tools .lang-switch{top:auto;right:auto}}
+
+/* ===== Brand theme: ASEL red (#981B1E, from logo & catalog) + black ===== */
+:root{--red:#981B1E;--red-hover:#B3232A;--red-bright:#E2333B;--black:#0E0E10;--black-2:#17171A;--acc:var(--red);--acc-hover:var(--red-hover)}
+.nav{border-bottom:1px solid var(--line);box-shadow:inset 0 -2px 0 var(--red)}
+.links a.active{color:var(--red);border-bottom-color:var(--red)}
+.btn{background:var(--red)}
+.btn:hover{background:var(--red-hover)}
+.nav-tools .lang-switch button.active{background:var(--black);border-color:var(--black)}
+.hero h1{letter-spacing:-.02em}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:8px}
+.hero .eyebrow::before{content:"";width:18px;height:2px;background:var(--red);display:inline-block}
+.specs tr td:first-child{color:var(--mute)}
+.card{border-top:3px solid transparent}
+.card:hover{border-top-color:var(--red)}
+
+/* Dark brand bands */
+.band-dark{background:var(--black);color:#f5f5f7}
+.band-dark h2,.band-dark h3,.band-dark b{color:#fff}
+.band-dark .lead,.band-dark p{color:#c7c7cc}
+.band-dark .eyebrow{color:var(--red-bright)}
+.band-dark .btn.ghost{color:#fff!important}
+.band-dark .fine{font-size:12px;color:#8e8e93;margin-top:14px}
+.band-dark a:not(.btn){color:#fff}
+.band-red{background:linear-gradient(135deg,var(--red) 0%,#6E1216 100%);color:#fff}
+.band-red h2,.band-red b{color:#fff}
+.band-red .big span,.band-red p{color:rgba(255,255,255,.82)}
+.fair-strip{background:var(--alt)}
+.fine{font-size:12px;color:var(--mute);margin-top:14px}
+
+/* Video cards */
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px;align-items:start}
+.vcard{margin:0}
+.vcard .vframe{position:relative;border-radius:18px;overflow:hidden;background:#000;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.vcard video{display:block;width:100%;height:100%;object-fit:cover;background:#000}
+.vcard.v .vframe{aspect-ratio:9/16}
+.vcard.h .vframe,.vcard.s .vframe{aspect-ratio:16/9}
+.vcard.s .vframe{aspect-ratio:1/1}
+.vgrid .vcard.h{grid-column:span 2}
+.vcard figcaption{padding:10px 4px 0;font-size:13px;line-height:1.4;display:flex;flex-direction:column;gap:2px}
+.vcard figcaption b{font-weight:600;font-size:14px}
+.vcard figcaption span{color:var(--mute)}
+.band-dark .vcard figcaption span{color:#a1a1a6}
+.vhero{border-radius:24px;overflow:hidden;background:#000;aspect-ratio:21/9}
+.vhero video{width:100%;height:100%;object-fit:cover;display:block}
+.easy .split{align-items:center}
+.easy-video{max-width:340px;margin:0 auto;width:100%}
+.easy-video .vframe{border:1px solid rgba(255,255,255,.08)}
+.fair-strip .vcard{width:100%}
+.news-video{max-width:320px;margin-top:24px}
+@media(max-width:820px){.vgrid{grid-template-columns:repeat(2,1fr);gap:14px}.vgrid .vcard.h{grid-column:span 2}.vhero{aspect-ratio:16/9}}
+
+/* Dark footer */
+footer{background:var(--black)!important;color:#a1a1a6!important;border-top:3px solid var(--red)!important}
+footer a{color:#e5e5ea}
+footer a:hover{color:#fff!important}
+footer h4{color:#fff}
+footer img[src*="kilic-logo"]{height:40px!important}
+footer [style*="color:var(--mute)"]{color:#a1a1a6!important}
+footer .base{border-top-color:rgba(255,255,255,.12)!important}
