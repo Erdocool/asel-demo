@@ -360,3 +360,18 @@ footer h4{color:#fff}
 footer img[src*="kilic-logo"]{height:40px!important}
 footer [style*="color:var(--mute)"]{color:#a1a1a6!important}
 footer .base{border-top-color:rgba(255,255,255,.12)!important}
+
+/* Üretim / Fabrikamız */
+.uretim{padding:88px 0}
+.uretim .lead{margin:0 auto}
+.uretim-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px}
+.ug-item{display:block;border-radius:16px;overflow:hidden;background:#1c1c1e;position:relative}
+.ug-item img{width:100%;height:100%;aspect-ratio:3/2;object-fit:cover;display:block;transition:transform .5s ease}
+.ug-item:hover img{transform:scale(1.04)}
+.ug-item::after{content:"";position:absolute;inset:auto 0 0 0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
+.ug-item:hover::after{transform:scaleX(1)}
+.ug-big{grid-column:span 2;grid-row:span 2}
+.uretim-home{padding:88px 0}
+.uh-img{display:block;border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.08);border-bottom:4px solid var(--red)}
+.uh-img img{width:100%;height:auto;display:block}
+@media(max-width:734px){.uretim-grid{grid-template-columns:1fr 1fr;gap:8px}.ug-item:last-child{grid-column:span 2}.ug-big{grid-column:span 2;grid-row:auto}.uretim{padding:64px 0}.uretim-home{padding:64px 0}}
