@@ -1,0 +1,178 @@
+{
+  "source_commit": "49f24a889bcc9e9f175ab90276843540451d06fa",
+  "created": "2026-11-18 16:33 Europe/Istanbul",
+  "purpose": "Yedek: gerçek sitede olmayan, demoya eklenmiş başlık/etiketler. Tek tek geri eklenebilir. Site menüsünden linklenmez.",
+  "restore": "Bir maddeyi geri almak için ilgili dosyada replacement_html geçen yeri original_html ile değiştirin (veya bu listedeki original_html parçasını eski yerine koyun).",
+  "items": [
+    {
+      "id": "index-tr-40412-card-sessiz",
+      "file": "index.html",
+      "line": 59,
+      "lang": "tr",
+      "removed_text": "Sınıfının en sessizi",
+      "context": "Ana sayfa ürün kaydırıcısı, ASHT-40412 kartı açıklama satırı",
+      "original_html": "<p>1250 Nm · 5500 r.p.m · Sınıfının en sessizi</p>",
+      "replacement_html": "<p>1250 Nm · 5500 r.p.m</p>"
+    },
+    {
+      "id": "index-en-40412-card-quietest",
+      "file": "index-en.html",
+      "line": 59,
+      "lang": "en",
+      "removed_text": "The quietest in its class",
+      "context": "Homepage product carousel, ASHT-40412 card description line",
+      "original_html": "<p>1250 Nm · 5500 r.p.m · The quietest in its class</p>",
+      "replacement_html": "<p>1250 Nm · 5500 r.p.m</p>"
+    },
+    {
+      "id": "index-tr-inceleme-card",
+      "file": "index.html",
+      "line": 75,
+      "lang": "tr",
+      "removed_text": "Derin bakış / İçini görün",
+      "context": "Ana sayfa ürün kaydırıcısı, inceleme.html’e giden patlatılmış görünüm kartı (başlık ve etiket)",
+      "original_html": "<div class=\"meta\"><div class=\"tag\">Derin bakış</div><h3>İçini görün</h3><p>Patlatılmış görünüm ve yakın plan detaylar.</p><span class=\"btn ghost\">İncelemeye git ›</span></div>",
+      "replacement_html": "<div class=\"meta\"><div class=\"tag\">1/2\" · Çift Çekiç</div><h3>ASHT‑4050012</h3><p>Patlatılmış görünüm</p><span class=\"btn ghost\">İncelemeye git ›</span></div>"
+    },
+    {
+      "id": "index-en-inceleme-card",
+      "file": "index-en.html",
+      "line": 75,
+      "lang": "en",
+      "removed_text": "Deep dive / See inside",
+      "context": "Homepage product carousel, card linking to the exploded-view page (heading and eyebrow tag)",
+      "original_html": "<div class=\"meta\"><div class=\"tag\">Deep dive</div><h3>See inside</h3><p>Exploded view and close-up details.</p><span class=\"btn ghost\">View ›</span></div>",
+      "replacement_html": "<div class=\"meta\"><div class=\"tag\">1/2\" · Twin Hammer</div><h3>ASHT‑4050012</h3><p>Exploded view</p><span class=\"btn ghost\">View ›</span></div>"
+    },
+    {
+      "id": "index-tr-video-heading",
+      "file": "index.html",
+      "line": 106,
+      "lang": "tr",
+      "removed_text": "Kullanım kolaylığı / Çocuk bile sökebiliyor.",
+      "context": "Ana sayfa saha videosu bölümü (eyebrow + H2). Video ve ‘tekerlek somunu / kullanıcı videosu’ açıklaması duruyor. Eyebrow, başlık kalkınca yetim kalmasın diye birlikte yedeklendi.",
+      "original_html": "      <p class=\"eyebrow\">Kullanım kolaylığı</p>\n      <h2>Çocuk bile sökebiliyor.</h2>",
+      "replacement_html": "      <h2>Videolar</h2>"
+    },
+    {
+      "id": "index-en-video-heading",
+      "file": "index-en.html",
+      "line": 106,
+      "lang": "en",
+      "removed_text": "Easy to use / Even a child can do it.",
+      "context": "Homepage field-video section (eyebrow + H2). Video and factual lead kept. Eyebrow backed up so it is not left orphaned.",
+      "original_html": "      <p class=\"eyebrow\">Easy to use</p>\n      <h2>Even a child can do it.</h2>",
+      "replacement_html": "      <h2>Videos</h2>"
+    },
+    {
+      "id": "index-tr-rakamlarla",
+      "file": "index.html",
+      "line": 118,
+      "lang": "tr",
+      "removed_text": "Rakamlarla",
+      "context": "Ana sayfa kırmızı bant, ASHT-4050012 katalog rakamları. Başlık yerine ürün kodu kullanıldı (katalog/resmi ürün adı; yeni slogan üretilmedi).",
+      "original_html": "    <h2 class=\"reveal\">Rakamlarla</h2>",
+      "replacement_html": "    <h2 class=\"reveal\">ASHT‑4050012</h2>"
+    },
+    {
+      "id": "index-en-by-the-numbers",
+      "file": "index-en.html",
+      "line": 118,
+      "lang": "en",
+      "removed_text": "By the numbers",
+      "context": "Homepage red stats band for ASHT-4050012 catalog figures. Heading replaced with the product code.",
+      "original_html": "    <h2 class=\"reveal\">By the numbers</h2>",
+      "replacement_html": "    <h2 class=\"reveal\">ASHT‑4050012</h2>"
+    },
+    {
+      "id": "index-tr-fuarlar-heading",
+      "file": "index.html",
+      "line": 132,
+      "lang": "tr",
+      "removed_text": "Fuarlarda ASEL.",
+      "context": "Ana sayfa fuar videosu bölümü. H2 kaldırıldı; mevcut ‘Fuarlar’ etiketi H2 yapıldı (videolar sayfasındaki bölüm etiketi). Eyebrow yetim kalmasın diye birlikte yedeklendi. Fuar videoları ve açıklama duruyor.",
+      "original_html": "      <p class=\"eyebrow\">Fuarlar</p>\n      <h2>Fuarlarda ASEL.</h2>",
+      "replacement_html": "      <h2>Fuarlar</h2>"
+    },
+    {
+      "id": "index-en-fuarlar-heading",
+      "file": "index-en.html",
+      "line": 132,
+      "lang": "en",
+      "removed_text": "ASEL at the fairs.",
+      "context": "Homepage fair-video section. H2 removed; existing ‘Fairs’ label promoted to H2 so the eyebrow is not orphaned. Videos and factual lead kept.",
+      "original_html": "      <p class=\"eyebrow\">Fairs</p>\n      <h2>ASEL at the fairs.</h2>",
+      "replacement_html": "      <h2>Fairs</h2>"
+    },
+    {
+      "id": "index-tr-atolye-heading",
+      "file": "index.html",
+      "line": 143,
+      "lang": "tr",
+      "removed_text": "Ankara’da, kendi atölyemizde.",
+      "context": "Ana sayfa atölye/üretim bölümü. H2 kaldırıldı; mevcut ‘Üretim’ etiketi H2 yapıldı. Fotoğraf, ‘Ankara'daki atölyemizden kareler.’ açıklaması ve Hakkımızda linki duruyor.",
+      "original_html": "      <p class=\"eyebrow\">Üretim</p>\n      <h2>Ankara’da, kendi atölyemizde.</h2>",
+      "replacement_html": "      <h2>Üretim</h2>"
+    },
+    {
+      "id": "index-en-atolye-heading",
+      "file": "index-en.html",
+      "line": 143,
+      "lang": "en",
+      "removed_text": "In our own workshop in Ankara.",
+      "context": "Homepage workshop section. H2 removed; existing ‘Production’ label promoted to H2. Photo, lead and About link kept.",
+      "original_html": "      <p class=\"eyebrow\">Production</p>\n      <h2>In our own workshop in Ankara.</h2>",
+      "replacement_html": "      <h2>Production</h2>"
+    },
+    {
+      "id": "urun-asht-40412-meta-description",
+      "file": "urun-asht-40412.html",
+      "line": 7,
+      "lang": "tr",
+      "removed_text": "Sınıfının en sessizi.",
+      "context": "ASHT-40412 sayfası meta description (üç etiket: description, og:description, twitter:description)",
+      "original_html": "content=\"ASHT‑40412 1/2\" havalı somun sökme — 1250 Nm, çift çekiç, 1,78 kg. Sınıfının en sessizi.\"",
+      "replacement_html": "content=\"ASHT‑40412 1/2\" havalı somun sökme — 1250 Nm, çift çekiç, 1,78 kg.\""
+    },
+    {
+      "id": "urun-asht-40412-lead",
+      "file": "urun-asht-40412.html",
+      "line": 43,
+      "lang": "tr",
+      "removed_text": "Sınıfının en sessizi.",
+      "context": "ASHT-40412 ürün sayfası hero açıklama satırı",
+      "original_html": "  <p class=\"lead reveal\">Çift çekiç. 1250 Nm. Sınıfının en sessizi.</p>",
+      "replacement_html": "  <p class=\"lead reveal\">Çift çekiç. 1250 Nm.</p>"
+    },
+    {
+      "id": "inceleme-eyebrow-derin-bakis",
+      "file": "inceleme.html",
+      "line": 44,
+      "lang": "tr",
+      "removed_text": "Derin bakış",
+      "context": "inceleme.html hero eyebrow. H1 ‘ASHT‑4050012 inceleme’ duruyor; etiket kaldırıldı ki yetim kalmasın.",
+      "original_html": "  <p class=\"eyebrow reveal\">Derin bakış</p>\n",
+      "replacement_html": ""
+    },
+    {
+      "id": "videolar-tr-caption-cocuk",
+      "file": "videolar.html",
+      "line": 55,
+      "lang": "tr",
+      "removed_text": "Çocuk bile sökebiliyor",
+      "context": "Videolar sayfası saha bölümü, cocuk-bile-sokuyor.mp4 figcaption başlığı. Slogan kaldırıldı; mevcut ‘Kullanıcı videosu’ etiketi bırakıldı.",
+      "original_html": "<figcaption><b>Çocuk bile sökebiliyor</b><span>Kullanıcı videosu</span></figcaption>",
+      "replacement_html": "<figcaption><span>Kullanıcı videosu</span></figcaption>"
+    },
+    {
+      "id": "videolar-en-caption-child",
+      "file": "videolar-en.html",
+      "line": 55,
+      "lang": "en",
+      "removed_text": "Even a child can do it",
+      "context": "Videos page, field section, cocuk-bile-sokuyor.mp4 figcaption heading. Slogan removed; existing ‘User video’ label kept.",
+      "original_html": "<figcaption><b>Even a child can do it</b><span>User video</span></figcaption>",
+      "replacement_html": "<figcaption><span>User video</span></figcaption>"
+    }
+  ]
+}
