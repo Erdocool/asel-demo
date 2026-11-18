@@ -173,6 +173,97 @@
       "context": "Videos page, field section, cocuk-bile-sokuyor.mp4 figcaption heading. Slogan removed; existing ‘User video’ label kept.",
       "original_html": "<figcaption><b>Even a child can do it</b><span>User video</span></figcaption>",
       "replacement_html": "<figcaption><span>User video</span></figcaption>"
+    },
+    {
+      "id": "index-tr-atolye-lead",
+      "file": "index.html",
+      "line": 142,
+      "lang": "tr",
+      "removed_text": "Ankara'daki atölyemizden kareler.",
+      "context": "Ana sayfa üretim bölümü lead cümlesi. H2 ‘Üretim’, fotoğraf ve ‘Fabrikamızı görün’ düğmesi duruyor.",
+      "original_html": "      <p class=\"lead\" style=\"margin-left:0\">Ankara'daki atölyemizden kareler.</p>\n",
+      "replacement_html": ""
+    },
+    {
+      "id": "index-en-atolye-lead",
+      "file": "index-en.html",
+      "line": 142,
+      "lang": "en",
+      "removed_text": "Moments from our workshop in Ankara.",
+      "context": "Homepage production section lead. H2 ‘Production’, photo and ‘See our factory’ button kept.",
+      "original_html": "      <p class=\"lead\" style=\"margin-left:0\">Moments from our workshop in Ankara.</p>\n",
+      "replacement_html": ""
+    },
+    {
+      "id": "hakkimizda-tr-atolye-lead",
+      "file": "hakkimizda.html",
+      "line": 67,
+      "lang": "tr",
+      "removed_text": "Ankara'daki atölyemizden kareler.",
+      "context": "Hakkımızda üretim bölümü lead cümlesi. Eyebrow ‘Üretim’, H2 ‘Fabrikamız.’ ve fotoğraf ızgarası duruyor.",
+      "original_html": "      <p class=\"lead\">Ankara'daki atölyemizden kareler.</p>\n",
+      "replacement_html": ""
+    },
+    {
+      "id": "hakkimizda-en-atolye-lead",
+      "file": "hakkimizda-en.html",
+      "line": 67,
+      "lang": "en",
+      "removed_text": "Moments from our workshop in Ankara.",
+      "context": "About page production section lead. Eyebrow ‘Production’, H2 ‘Our factory.’ and photo grid kept.",
+      "original_html": "      <p class=\"lead\">Moments from our workshop in Ankara.</p>\n",
+      "replacement_html": ""
+    },
+    {
+      "id": "videolar-tr-saha-headings",
+      "file": "videolar.html",
+      "line": 52,
+      "lang": "tr",
+      "removed_text": "Sahada ASEL / Gerçek kullanıcılar, gerçek işler.",
+      "context": "Videolar sayfası #saha bölümü eyebrow + H2. Sayfa H1 zaten ‘Videolar’; yeni slogan üretilmedi. Mevcut lead ‘Servislerden ve atölyelerden kullanıcı videoları.’ ve video ızgarası duruyor.",
+      "original_html": "    <p class=\"eyebrow reveal\">Sahada ASEL</p>\n    <h2 class=\"reveal\">Gerçek kullanıcılar, gerçek işler.</h2>\n",
+      "replacement_html": ""
+    },
+    {
+      "id": "videolar-en-saha-headings",
+      "file": "videolar-en.html",
+      "line": 52,
+      "lang": "en",
+      "removed_text": "ASEL in the field / Real users, real work.",
+      "context": "Videos page #saha section eyebrow + H2. Page H1 is already ‘Videos’; no new slogan invented. Existing lead and video grid kept.",
+      "original_html": "    <p class=\"eyebrow reveal\">ASEL in the field</p>\n    <h2 class=\"reveal\">Real users, real work.</h2>\n",
+      "replacement_html": ""
+    },
+    {
+      "id": "videolar-tr-uretim-heading",
+      "file": "videolar.html",
+      "line": 61,
+      "lang": "tr",
+      "removed_text": "Ankara’da üretim.",
+      "context": "Videolar sayfası #uretim bölümü H2. Mevcut ‘Üretim’ etiketi H2 yapıldı ki eyebrow yetim kalmasın. Lead ‘Fabrikamızdan kareler.’ ve videolar duruyor.",
+      "original_html": "    <p class=\"eyebrow reveal\">Üretim</p>\n    <h2 class=\"reveal\">Ankara’da üretim.</h2>",
+      "replacement_html": "    <h2 class=\"reveal\">Üretim</h2>"
+    },
+    {
+      "id": "videolar-en-uretim-heading",
+      "file": "videolar-en.html",
+      "line": 61,
+      "lang": "en",
+      "removed_text": "Made in Ankara.",
+      "context": "Videos page #uretim section H2. Existing ‘Production’ label promoted to H2 so the eyebrow is not orphaned. Lead and videos kept.",
+      "original_html": "    <p class=\"eyebrow reveal\">Production</p>\n    <h2 class=\"reveal\">Made in Ankara.</h2>",
+      "replacement_html": "    <h2 class=\"reveal\">Production</h2>"
+    }
+  ],
+  "source_commits": [
+    "49f24a889bcc9e9f175ab90276843540451d06fa",
+    "d93db4f6d79b69da2a628f53166f127bed013cf1"
+  ],
+  "appends": [
+    {
+      "from_commit": "d93db4f6d79b69da2a628f53166f127bed013cf1",
+      "date": "2026-11-18 17:02 Europe/Istanbul",
+      "note": "İkinci tur: kullanıcı onaylı dört ek icat satır (atölye lead + videolar saha/üretim başlıkları)."
     }
   ]
 }

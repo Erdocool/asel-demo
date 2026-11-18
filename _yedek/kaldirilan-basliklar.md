@@ -2,7 +2,9 @@
 
 Bu dosya siteden **linklenmez**. Kaldırılan her başlık/etiket, bulunduğu dosya ve tam HTML parçasıyla saklanır. “Şu kalsın” denirse ilgili madde `original_html` ile tek tek geri konabilir.
 
-- Kaynak commit (kaldırmadan önceki hali): `49f24a889bcc9e9f175ab90276843540451d06fa`
+- Kaynak commit (ilk tur, kaldırmadan önceki hali): `49f24a889bcc9e9f175ab90276843540451d06fa`
+- İkinci tur kaynak commit (bu maddelerin kaldırmadan önceki hali): `d93db4f6d79b69da2a628f53166f127bed013cf1`
+- İkinci tur yedek tarihi: 2026-11-18 17:02 Europe/Istanbul
 - Yedek tarihi: 2026-11-18 16:33 Europe/Istanbul
 - Geri ekleme: aşağıdaki her maddede **Yeni HTML** geçen yeri **Orijinal HTML** ile değiştirin.
 
@@ -384,6 +386,188 @@ Yeni HTML (yerine konan):
 
 ```html
 <figcaption><span>User video</span></figcaption>
+```
+
+---
+
+<!-- ikinci tur -->
+
+## `index-tr-atolye-lead`
+
+- **Kaldırılan metin:** Ankara'daki atölyemizden kareler.
+- **Dosya:** `index.html`
+- **Satır (commit d93db4f):** 142
+- **Dil:** tr
+- **Konum / bağlam:** Ana sayfa üretim bölümü lead cümlesi. H2 ‘Üretim’, fotoğraf ve ‘Fabrikamızı görün’ düğmesi duruyor.
+
+Orijinal HTML:
+
+```html
+      <p class="lead" style="margin-left:0">Ankara'daki atölyemizden kareler.</p>
+```
+
+Yeni HTML (yerine konan):
+
+```html
+(kaldırıldı, yerine bir şey konmadı)
+```
+
+---
+
+## `index-en-atolye-lead`
+
+- **Kaldırılan metin:** Moments from our workshop in Ankara.
+- **Dosya:** `index-en.html`
+- **Satır (commit d93db4f):** 142
+- **Dil:** en
+- **Konum / bağlam:** Homepage production section lead. H2 ‘Production’, photo and ‘See our factory’ button kept.
+
+Orijinal HTML:
+
+```html
+      <p class="lead" style="margin-left:0">Moments from our workshop in Ankara.</p>
+```
+
+Yeni HTML (yerine konan):
+
+```html
+(kaldırıldı, yerine bir şey konmadı)
+```
+
+---
+
+## `hakkimizda-tr-atolye-lead`
+
+- **Kaldırılan metin:** Ankara'daki atölyemizden kareler.
+- **Dosya:** `hakkimizda.html`
+- **Satır (commit d93db4f):** 67
+- **Dil:** tr
+- **Konum / bağlam:** Hakkımızda üretim bölümü lead cümlesi. Eyebrow ‘Üretim’, H2 ‘Fabrikamız.’ ve fotoğraf ızgarası duruyor.
+
+Orijinal HTML:
+
+```html
+      <p class="lead">Ankara'daki atölyemizden kareler.</p>
+```
+
+Yeni HTML (yerine konan):
+
+```html
+(kaldırıldı, yerine bir şey konmadı)
+```
+
+---
+
+## `hakkimizda-en-atolye-lead`
+
+- **Kaldırılan metin:** Moments from our workshop in Ankara.
+- **Dosya:** `hakkimizda-en.html`
+- **Satır (commit d93db4f):** 67
+- **Dil:** en
+- **Konum / bağlam:** About page production section lead. Eyebrow ‘Production’, H2 ‘Our factory.’ and photo grid kept.
+
+Orijinal HTML:
+
+```html
+      <p class="lead">Moments from our workshop in Ankara.</p>
+```
+
+Yeni HTML (yerine konan):
+
+```html
+(kaldırıldı, yerine bir şey konmadı)
+```
+
+---
+
+## `videolar-tr-saha-headings`
+
+- **Kaldırılan metin:** Sahada ASEL / Gerçek kullanıcılar, gerçek işler.
+- **Dosya:** `videolar.html`
+- **Satır (commit d93db4f):** 52
+- **Dil:** tr
+- **Konum / bağlam:** Videolar sayfası #saha bölümü eyebrow + H2. Sayfa H1 zaten ‘Videolar’; yeni slogan üretilmedi. Mevcut lead ‘Servislerden ve atölyelerden kullanıcı videoları.’ ve video ızgarası duruyor.
+
+Orijinal HTML:
+
+```html
+    <p class="eyebrow reveal">Sahada ASEL</p>
+    <h2 class="reveal">Gerçek kullanıcılar, gerçek işler.</h2>
+```
+
+Yeni HTML (yerine konan):
+
+```html
+(kaldırıldı, yerine bir şey konmadı)
+```
+
+---
+
+## `videolar-en-saha-headings`
+
+- **Kaldırılan metin:** ASEL in the field / Real users, real work.
+- **Dosya:** `videolar-en.html`
+- **Satır (commit d93db4f):** 52
+- **Dil:** en
+- **Konum / bağlam:** Videos page #saha section eyebrow + H2. Page H1 is already ‘Videos’; no new slogan invented. Existing lead and video grid kept.
+
+Orijinal HTML:
+
+```html
+    <p class="eyebrow reveal">ASEL in the field</p>
+    <h2 class="reveal">Real users, real work.</h2>
+```
+
+Yeni HTML (yerine konan):
+
+```html
+(kaldırıldı, yerine bir şey konmadı)
+```
+
+---
+
+## `videolar-tr-uretim-heading`
+
+- **Kaldırılan metin:** Ankara’da üretim.
+- **Dosya:** `videolar.html`
+- **Satır (commit d93db4f):** 61
+- **Dil:** tr
+- **Konum / bağlam:** Videolar sayfası #uretim bölümü H2. Mevcut ‘Üretim’ etiketi H2 yapıldı ki eyebrow yetim kalmasın. Lead ‘Fabrikamızdan kareler.’ ve videolar duruyor.
+
+Orijinal HTML:
+
+```html
+    <p class="eyebrow reveal">Üretim</p>
+    <h2 class="reveal">Ankara’da üretim.</h2>
+```
+
+Yeni HTML (yerine konan):
+
+```html
+    <h2 class="reveal">Üretim</h2>
+```
+
+---
+
+## `videolar-en-uretim-heading`
+
+- **Kaldırılan metin:** Made in Ankara.
+- **Dosya:** `videolar-en.html`
+- **Satır (commit d93db4f):** 61
+- **Dil:** en
+- **Konum / bağlam:** Videos page #uretim section H2. Existing ‘Production’ label promoted to H2 so the eyebrow is not orphaned. Lead and videos kept.
+
+Orijinal HTML:
+
+```html
+    <p class="eyebrow reveal">Production</p>
+    <h2 class="reveal">Made in Ankara.</h2>
+```
+
+Yeni HTML (yerine konan):
+
+```html
+    <h2 class="reveal">Production</h2>
 ```
 
 ---
