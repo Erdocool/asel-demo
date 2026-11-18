@@ -81,7 +81,7 @@
     <div>
       <p class="center" style="font-size:14px;margin-bottom:10px;font-weight:500" id="nameB">ASHT‑40634</p>
       <div class="viewer-shell">
-  <model-viewer id="mvB" src="assets/asht40634.glb" poster="assets/asht-40634.webp"
+  <model-viewer id="mvB" src="assets/asht40634.glb"
     alt="Sağ ürün 3D modeli" camera-controls touch-action="none" shadow-intensity="0.55"
     exposure="1.05" environment-image="neutral" interaction-prompt="auto"
     camera-orbit="35deg 70deg 105%" field-of-view="28deg" min-field-of-view="18deg" max-field-of-view="40deg"
@@ -90,7 +90,7 @@
 </div>
     </div>
   </div>
-  <p class="note reveal">ASHT‑4050012 / 40512 ve ASHT‑40634 için GLB yüklü. ASHT‑40412’de 3D yok — poster gösterilir. Kamera senkron. Ürün sayfalarına seçiciden gidebilirsiniz.</p>
+  <p class="note reveal">Tüm ASHT modelleri (4050012 / 40512, 40412, 40634) 3D olarak yüklü. Kamera senkron. Ürün sayfalarına seçiciden gidebilirsiniz.</p>
 
   <div class="reveal" style="overflow-x:auto">
   <table class="compare-table" id="cmpTable">
@@ -118,7 +118,7 @@ const PRODUCTS = {
   },
   "40412": {
     name: "ASHT‑40412",
-    glb: "",
+    glb: "assets/asht40412.glb",
     poster: "assets/urun/asht-40412-1.jpg",
     href: "urun-asht-40412.html",
     specs: {"Çekiç":"Çift Çekiç","Uzunluk":"146 mm","Cıvata Çapı":"17 mm","Soket Karesi":"1/2 inç","Maksimum Tork":"1250 Nm","Boşta Devir":"5500 r.p.m","Hortum Çapı":"10 mm","Hava Giriş Nipeli":"1/4 inç","Hava Tüketimi":"160 lt/dk","Çalışma Basıncı":"90–115 psi (6,5–8 bar)","Ağırlık":"1,78 kg","Ses Basınç Seviyesi LpA":"≈72,7 dB(A)","Ses Güç Seviyesi LwA":"—","Titreşim":"2,49 m/sn²"}
@@ -135,11 +135,12 @@ const KEYS = ["Çekiç","Soket Karesi","Maksimum Tork","Boşta Devir","Cıvata �
 function applyModel(mv, key) {
   const p = PRODUCTS[key];
   if (!mv || !p) return;
-  mv.setAttribute('poster', p.poster);
   if (p.glb) {
+    mv.removeAttribute('poster');
     mv.setAttribute('src', p.glb);
     mv.style.opacity = '1';
   } else {
+    mv.setAttribute('poster', p.poster);
     mv.removeAttribute('src');
     mv.style.opacity = '1';
   }
