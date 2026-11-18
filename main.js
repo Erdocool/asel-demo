@@ -155,9 +155,18 @@ document.body.appendChild(whatsappBtn);
 (function() {
   if (localStorage.getItem('cookieConsent')) return;
   
+  const isEn = document.documentElement.lang === 'en' || /(?:^|\/)[^/]*-en\.html(?:[?#]|$)/.test(location.pathname);
   const banner = document.createElement('div');
   banner.className = 'cookie-banner';
-  banner.innerHTML = `
+  banner.innerHTML = isEn ? `
+    <div class="cookie-content">
+      <p>This website uses cookies to improve your experience. By continuing to use the site, you accept the use of cookies. <a href="cerez-politikasi.html" style="color:#E2333B;text-decoration:underline">Learn more</a></p>
+      <div class="cookie-buttons">
+        <button class="accept" onclick="acceptCookies()">Accept</button>
+        <button class="decline" onclick="declineCookies()">Decline</button>
+      </div>
+    </div>
+  ` : `
     <div class="cookie-content">
       <p>Bu web sitesi, deneyiminizi iyileştirmek için çerezler kullanmaktadır. Siteyi kullanmaya devam ederek çerez kullanımını kabul etmiş olursunuz. <a href="cerez-politikasi.html" style="color:#E2333B;text-decoration:underline">Daha fazla bilgi</a></p>
       <div class="cookie-buttons">
