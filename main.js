@@ -206,14 +206,16 @@ document.body.appendChild(whatsappBtn);
       {title: 'ASHT-40412', url: 'urun-asht-40412.html', desc: '1250 Nm kompakt sessiz'},
       {title: 'ASHT-40512', url: 'urun-asht-40512.html', desc: '1750 Nm profesyonel'},
       {title: 'ASHT-40634', url: 'urun-asht-40634.html', desc: '2500 Nm ağır hizmet'},
-      {title: 'NIAPRO NA123', url: 'urun-niapro-na123.html', desc: 'Havalı çekiç'},
-      {title: 'NIAPRO NA212', url: 'urun-niapro-na212.html', desc: 'Havalı çekiç'},
-      {title: 'NIAPRO NA260', url: 'urun-niapro-na260.html', desc: 'Havalı çekiç'},
-      {title: 'NIAPRO NA320', url: 'urun-niapro-na320.html', desc: 'Havalı çekiç'},
-      {title: 'NIAPRO NC268', url: 'urun-niapro-nc268.html', desc: 'Kesme aleti'},
-      {title: 'NIAPRO NH138', url: 'urun-niapro-nh138.html', desc: 'Havalı çekiç'},
-      {title: 'NIAPRO NH148', url: 'urun-niapro-nh148.html', desc: 'Havalı çekiç'},
-      {title: 'NIAPRO NH214', url: 'urun-niapro-nh214.html', desc: 'Havalı çekiç'}
+      {title: 'NIAPRO NA123', url: 'urun-niapro-na123.html', desc: 'Akülü darbeli tornavida'},
+      {title: 'NIAPRO NA212', url: 'urun-niapro-na212.html', desc: 'Akülü somun sıkma'},
+      {title: 'NIAPRO NA260', url: 'urun-niapro-na260.html', desc: 'Akülü somun sıkma'},
+      {title: 'NIAPRO NA320', url: 'urun-niapro-na320.html', desc: 'Akülü somun sıkma'},
+      {title: 'NIAPRO NC268', url: 'urun-niapro-nc268.html', desc: 'Havalı cırcır anahtar'},
+      {title: 'NIAPRO NH138', url: 'urun-niapro-nh138.html', desc: 'Havalı somun sökme (1")'},
+      {title: 'NIAPRO NH148', url: 'urun-niapro-nh148.html', desc: 'Havalı somun sökme (1")'},
+      {title: 'NIAPRO NH214', url: 'urun-niapro-nh214.html', desc: 'Havalı somun sökme'},
+      {title: 'NIAPRO NH255', url: 'urun-niapro-nh255.html', desc: 'Havalı somun sökme'},
+      {title: 'NIAPRO NZ600', url: 'urun-niapro-nz600.html', desc: 'Havalı orbital zımpara'}
     ];
     searchData.products = productPages;
     
@@ -232,18 +234,33 @@ document.body.appendChild(whatsappBtn);
   
   buildSearchIndex();
   
+  const isEn = document.documentElement.lang === 'en' || /(?:^|\/)[^/]*-en\.html(?:[?#]|$)/.test(location.pathname);
+  const searchI18n = isEn ? {
+    aria: 'Search',
+    placeholder: 'Search products, pages or dealers...',
+    product: 'Product',
+    page: 'Page',
+    empty: 'No results found'
+  } : {
+    aria: 'Ara',
+    placeholder: 'Ürün, sayfa veya bayi ara...',
+    product: 'Ürün',
+    page: 'Sayfa',
+    empty: 'Sonuç bulunamadı'
+  };
+
   // Create search UI
   const searchBtn = document.createElement('button');
   searchBtn.className = 'search-btn';
   searchBtn.innerHTML = '🔍';
-  searchBtn.setAttribute('aria-label', 'Ara');
+  searchBtn.setAttribute('aria-label', searchI18n.aria);
   
   const searchOverlay = document.createElement('div');
   searchOverlay.className = 'search-overlay';
   searchOverlay.innerHTML = `
     <div class="search-modal">
       <div class="search-header">
-        <input type="text" class="search-input" placeholder="Ürün, sayfa veya bayi ara..." autofocus>
+        <input type="text" class="search-input" placeholder="${searchI18n.placeholder}" autofocus>
         <button class="search-close">&times;</button>
       </div>
       <div class="search-results"></div>
@@ -287,20 +304,20 @@ document.body.appendChild(whatsappBtn);
     // Search products
     searchData.products.forEach(item => {
       if (item.title.toLowerCase().includes(query) || item.desc.toLowerCase().includes(query)) {
-        results.push({...item, type: 'Ürün'});
+        results.push({...item, type: searchI18n.product});
       }
     });
     
     // Search pages
     searchData.pages.forEach(item => {
       if (item.title.toLowerCase().includes(query) || item.desc.toLowerCase().includes(query)) {
-        results.push({...item, type: 'Sayfa'});
+        results.push({...item, type: searchI18n.page});
       }
     });
     
     // Display results
     if (results.length === 0) {
-      searchResults.innerHTML = '<div class="search-no-results">Sonuç bulunamadı</div>';
+      searchResults.innerHTML = '<div class="search-no-results">' + searchI18n.empty + '</div>';
     } else {
       searchResults.innerHTML = results.map(r => `
         <a href="${r.url}" class="search-result">
